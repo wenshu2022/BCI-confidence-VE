@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/mpla/wenlou/1confiProj/model_fitting.py", line 136, in <module>
+    run_bads(objf, x0s,lower_bounds=lower_bounds, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/1confiProj/model_fitting.py", line 98, in run_bads
+    optimize_result = bads.optimize()
+                      ^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/pybads/bads/bads.py", line 1243, in optimize
+    ) = self._search_step_(gp)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/pybads/bads/bads.py", line 1558, in _search_step_
+    gp, gp_exit_flag = local_gp_fitting(
+                       ^^^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/pybads/bads/gaussian_process_train.py", line 402, in local_gp_fitting
+    gp, hyp_gp, res, exit_flag = _robust_gp_fit_(
+                                 ^^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/pybads/bads/gaussian_process_train.py", line 542, in _robust_gp_fit_
+    new_hyp, _, res = tmp_gp.fit(
+                      ^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/gpyreg/gaussian_process.py", line 1008, in fit
+    X, y, s2 = self._convert_shapes(X, y, s2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/gpyreg/gaussian_process.py", line 2555, in _convert_shapes
+    s2 = s2.reshape(N, 1)
+         ^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 200 into shape (189,1)
