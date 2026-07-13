@@ -4,6 +4,9 @@ import os
 
 fontsize = 16
 sub_lst = [2, 3, 5, 6 ,11 ,15 ,20, 25]
+#define color scheme.
+palette_beh= {'High': '#4C72B0', 'Low': '#DD8452'}
+palette_mod= {'High': '#9FB3C8', 'Low': '#EBD38A'}
 
 all_data_path = "P:/3026008.02/AllData/"
 plot_path = "M:/1confiProj/plots/"

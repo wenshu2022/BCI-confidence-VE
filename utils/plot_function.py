@@ -17,7 +17,7 @@ sns.set_theme(style="white")
 plot_path = 'M:\\1confiProj\\plots\\'
 fontsize = 16
 #plot the ventriloquism effects
-def plot_VE(df, ax, label, bias_var = 'bias', trial_type='A'):
+def plot_VE(df, ax, label, palette, bias_var = 'bias', trial_type='A'):
     """
     The function will plot across-subjects mean bias with sem error band
 
@@ -57,8 +57,20 @@ def plot_VE(df, ax, label, bias_var = 'bias', trial_type='A'):
         )
 
     #df_plt = df.groupby(['sub_id', 'delta_VA', 'VisRelLabel'])[bias_var].mean().reset_index()
-    sns.lineplot(df_plt, x = 'delta_VA', y = bias_var, linewidth=2.5, hue = 'VisRelLabel', ax = ax, errorbar = 'se', err_style='band') 
-
+    #sns.lineplot(df_plt, x = 'delta_VA', y = bias_var, linewidth=2.5, hue = 'VisRelLabel', ax = ax, errorbar = 'se', err_style='band') 
+    sns.lineplot(df_plt, 
+                    x = 'delta_VA', 
+                    y = bias_var, 
+                    hue = 'VisRelLabel', 
+                    hue_order=['High','Low'],  
+                    palette=palette ,
+                    ax = ax, 
+                    errorbar = 'se',
+                    err_style='bars',
+                    linewidth=2.5,
+                    #marker='o',
+                    #markersize=6,
+                    )
     clean_axs(ax)
     ax.set_xlabel("Spatial disparity (V - A, visual angle \u00B0)", fontsize=fontsize)
     ax.set_ylabel(label, fontsize=fontsize)
@@ -167,7 +179,7 @@ def plot_casual_conf(df, com_label, palette, ax, trial_type=None, leg=None):
                 palette=palette  
                 ,legend=leg
         ) 
-    clean_axs(ax)  
+    clean_axs(ax, fontsize=fontsize-2)  
     ax.set_xlabel('Spatial disparity, V - A ($^\circ$)', fontsize = fontsize)
     #ax.set_ylabel('Causal confidence (0-100)', fontsize = fontsize)
     ax.xaxis.set_major_locator(MultipleLocator(5))
