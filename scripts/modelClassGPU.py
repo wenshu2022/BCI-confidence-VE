@@ -18,7 +18,7 @@ class ModelParams:
     sig_P_h: float = 30
     sig_P_l: float = 30
     sig_rs: float = 0.01
-    sig_rconf: float = 1
+    sig_rconf: float = 0.01  #0.1
     sig_rc: float = 0.01
     gamma_rate: float = 2
     mu_P: float = 0
@@ -197,7 +197,7 @@ class ConfiModel:
             bounds.extend([(1e-8, 0.8),  (1e-8, 0.8), (1e-8, 0.8)])  
             p_bounds.extend([(1e-8, 0.5), (1e-8, 0.5), (1e-8, 0.5)])
 
-        if self.model_config['Causal_readout'] == 'Bay' and self.exp_config['decision_noise_flag'] in (1, -1):
+        if self.model_config['Causal_readout'] == 'Bay' and self.exp_config['decision_noise_flag'] in (1, -1, -2):
             params.append('logbeta')
             bounds.append((-4, 4))  
             p_bounds.append((-0.5, 1.5))
@@ -656,6 +656,9 @@ class ConfiModel:
             elif self.exp_config['decision_noise_flag'] == -1:
                 sim_post_conf = self.add_decision_noise(sim_post, 1)
                 sim_post = self.add_decision_noise(sim_post, 0) # Separate noises for confidence and decision
+            elif self.exp_config['decision_noise_flag'] == -2: # only noise for causal inference
+                sim_post_conf = sim_post.clone()
+                sim_post = self.add_decision_noise(sim_post, 0)
             else:
                 sim_post_conf = sim_post
 
