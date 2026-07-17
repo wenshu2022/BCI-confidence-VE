@@ -1,0 +1,1503 @@
+----------------------------------------
+Start task prologue Fri Jul 17 02:25:08 CEST 2026
+----------------------------------------
+Step ID:         54292409.
+Username:        wenlou
+Group:           mpla
+Asked resources: walltime=1-00:00:00,nodes=1,cpus=8,mem=2G
+Queue:           gpu
+Compute nodes:   dccn-c082
+----------------------------------------
+End task prologue Fri Jul 17 02:25:08 CEST 2026
+----------------------------------------
+CUDA version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Mar_28_02:18:24_PDT_2024
+Cuda compilation tools, release 12.4, V12.4.131
+Build cuda_12.4.r12.4/compiler.34097967_0
+
+[WARNING] Please note the interface change for (de-)activating conda environment:
+
+  - DO NOT use `conda activate` to enter the conda environment as it requires extra step to modify your ~/.bashrc file, which will force you to use this Anaconda version (2024.06).  Therefore keep using `source activate` instead.
+
+  - DO use `conda deactivate` to leave your conda environment as `source deactivate` will be deprecated in future release.
+
+Running model for expriment=with_dn_cc, m_id=2, method=bads
+device is : cuda
+['with_dn_cc', '2', 'all', 'bads', '2']
+
+ ------- Start Optimization for Subject 2 ---------- 
+
+ Cross Validation fold 0/1
+
+ -- Start Optimization: method BADS --
+
+ Optimization Run 1/2
+Initial params: [0.5244, 3.3527, 13.3463, 6.3914, -2.8279, 38.9322, 4.191, 0.6959, 22.7982, 17.6723, 0.2974, 0.4815, 0.1902, 0.1917, 1.1553]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         26151.5             nan               1                                  
+     0          33         25687.3             nan               1          Initial mesh            Initial points
+     0          34         25680.5           0.987               1        Successful poll           Train
+     1          35         25607.2        0.987049               1      Successful search (ES-wcm)        
+     1          43         25579.3        0.964668               1      Successful search (ES-wcm)        
+     1          54         25551.5        0.967501               1      Successful search (ES-wcm)        
+     1          57         25457.9        0.948926               1      Successful search (ES-wcm)        
+     1          66         25421.8         0.96199               1      Successful search (ES-wcm)        
+     1          73         25406.7        0.961834               1      Successful search (ES-wcm)        
+     1          75         25387.4        0.961954               1      Successful search (ES-wcm)        
+     1          81         25335.5         0.96197               1      Successful search (ES-wcm)        
+     1          94           25329        0.953672               1      Successful search (ES-wcm)        
+     1         108         25327.8          0.9237               1      Successful search (ES-wcm)        
+     1         109         25325.7        0.747785               1      Successful search (ES-ell)        
+     1         110         25283.1        0.985911               1      Successful search (ES-wcm)        
+     1         118         25204.2        0.985813               1      Successful search (ES-wcm)        
+     1         121           25204        0.985753               1      Incremental search (ES-wcm)        
+     1         122           25197        0.985735               1      Successful search (ES-wcm)        
+     1         123         25179.2        0.985735               1      Successful search (ES-wcm)        
+     1         130         25138.4        0.856818               1      Successful search (ES-ell)        
+     1         136         25129.6        0.837669               1      Successful search (ES-ell)        
+     1         139         25125.5        0.821542               1      Successful search (ES-ell)        
+     1         140         25078.8        0.857251               1      Successful search (ES-wcm)        
+     1         144         25046.5        0.857102               1      Successful search (ES-wcm)        
+     1         150         25041.5         0.85717               1      Successful search (ES-wcm)        
+     1         151         25028.3        0.856733               1      Successful search (ES-wcm)        
+     1         163         25012.7         2.86864               1      Successful search (ES-wcm)        
+     1         165         24999.6         2.77921               1      Successful search (ES-ell)        
+     1         167         24998.4         2.63809               1      Successful search (ES-ell)        
+     1         169         24993.6         2.67203               1      Successful search (ES-ell)        
+     1         173         24973.6         2.92981               1      Successful search (ES-ell)        
+     1         184         24967.3         2.91673               1      Successful search (ES-wcm)        
+     1         187         24961.8         2.91601               1      Successful search (ES-wcm)        
+     1         239         24938.1         21.7274               1        Successful poll           
+     2         265           24897         21.0787               1        Successful poll           Train
+     3         266         24872.8         11.9883               1      Successful search (ES-wcm)        
+     3         267           24789         11.9903               1      Successful search (ES-wcm)        
+     3         268         24663.1         12.0209               1      Successful search (ES-wcm)        
+     3         274         24631.1         11.6572               1      Successful search (ES-wcm)        
+     3         275         24552.5         11.8603               1      Successful search (ES-wcm)        
+     3         276           24440         11.8446               1      Successful search (ES-wcm)        
+     3         280         24437.3         11.4108               1      Successful search (ES-wcm)        
+     3         281         24400.4         11.4846               1      Successful search (ES-wcm)        
+     3         284         24362.1         11.7817               1      Successful search (ES-ell)        
+     3         288         24322.8         11.1357               1      Successful search (ES-ell)        
+     3         291         24311.5         10.2837               1      Successful search (ES-ell)        
+     3         293         24307.6         9.81872               1      Successful search (ES-ell)        
+     3         300         24301.6         7.99975               1      Successful search (ES-wcm)        
+     3         301         24294.4         9.87834               1      Successful search (ES-wcm)        
+     3         306         24292.4         6.42516               1      Successful search (ES-wcm)        
+     3         307         24290.9         8.05264               1      Successful search (ES-wcm)        
+     3         309         24276.9         9.42433               1      Successful search (ES-ell)        
+     3         311         24273.9         11.2796               1      Successful search (ES-ell)        
+     3         317         24265.2          9.0447               1      Successful search (ES-ell)        
+     3         320         24262.2         7.38566               1      Successful search (ES-ell)        
+     3         321         24258.6         9.59261               1      Successful search (ES-ell)        
+     3         323         24254.6         9.10256               1      Successful search (ES-ell)        
+     3         327         24242.9          9.7263               1      Successful search (ES-ell)        
+     3         330         24228.5         10.2049               1      Successful search (ES-ell)        
+     3         331         24213.4         10.5403               1      Successful search (ES-ell)        
+     3         344         24208.9         8.17044               1      Successful search (ES-ell)        
+     3         346         24156.3         7.59436               1      Successful search (ES-ell)        
+     3         359         24146.3         6.68428               1      Successful search (ES-wcm)        
+     3         362         24144.6         6.17536               1      Successful search (ES-wcm)        
+     3         366         24143.7         6.62565               1      Incremental search (ES-wcm)        
+     3         367         24142.1         6.36833               1      Successful search (ES-wcm)        
+     3         369         24139.1         5.60047               1      Successful search (ES-wcm)        
+     3         398         24115.9         11.0643               1        Successful poll           Train
+     4         400         24097.6          9.7786               1      Successful search (ES-ell)        
+     4         402         24089.6         10.1472               1      Successful search (ES-ell)        
+     4         405         24082.9         7.94866               1      Successful search (ES-ell)        
+     4         406         24038.4         9.21798               1      Successful search (ES-ell)        
+     4         413         24033.6         8.96522               1      Successful search (ES-wcm)        
+     4         416         24029.8         8.06207               1      Successful search (ES-ell)        
+     4         418         24015.8         7.88542               1      Successful search (ES-ell)        
+     4         419         23992.8         8.98614               1      Successful search (ES-ell)        
+     4         426           23984         7.46097               1      Successful search (ES-wcm)        
+     4         466         23983.5         5.76614             0.5          Refine grid             
+     5         467         23970.5         5.70633             0.5      Successful search (ES-wcm)        
+     5         475         23954.6         6.97267             0.5      Successful search (ES-wcm)        
+     5         522         23954.6         6.97267            0.25          Refine grid             
+     6         523         23982.8         4.53231            0.25      Successful search (ES-wcm)        
+     6         525         23980.5          6.6159            0.25      Successful search (ES-wcm)        
+     6         539         23979.2         6.60784            0.25      Successful search (ES-wcm)        
+     6         546         23977.4         4.15722            0.25      Successful search (ES-wcm)        
+     6         550         23975.1         4.32873            0.25      Successful search (ES-wcm)        
+     6         551         23973.2         4.12025            0.25      Successful search (ES-wcm)        
+     6         555           23954         10.5415            0.25      Successful search (ES-wcm)        
+     6         558         23947.3         8.62153            0.25      Successful search (ES-ell)        
+     6         560         23940.4         7.75501            0.25      Successful search (ES-ell)        
+     6         608           23903         12.3748             0.5        Successful poll           
+     7         649         23902.6         12.3677            0.25          Refine grid             Train
+     8         650         23905.5         4.55813            0.25      Successful search (ES-ell)        
+     8         705         23905.5         4.55813           0.125          Refine grid             Train
+     9         709         23894.7         6.45844           0.125      Successful search (ES-wcm)        
+     9         710         23893.6         5.36475           0.125      Successful search (ES-ell)        
+     9         711         23885.6         5.60602           0.125      Successful search (ES-ell)        
+     9         762         23885.6         5.60602          0.0625          Refine grid             
+    10         763         23898.2         3.20793          0.0625      Successful search (ES-ell)        
+    10         764         23894.2         4.65129          0.0625      Successful search (ES-ell)        
+    10         765         23894.1         5.94519          0.0625      Successful search (ES-ell)        
+    10         767         23888.7         5.47747          0.0625      Successful search (ES-ell)        
+    10         768         23886.5          6.1794          0.0625      Successful search (ES-ell)        
+    10         770         23885.3         6.32724          0.0625      Successful search (ES-ell)        
+    10         773         23881.3         5.62513          0.0625      Successful search (ES-ell)        
+    10         774         23868.6         7.35777          0.0625      Successful search (ES-wcm)        
+    10         777         23867.2         7.00635          0.0625      Successful search (ES-wcm)        
+    10         779         23866.4         4.88846          0.0625      Successful search (ES-wcm)        
+    10         780         23862.3         5.02885          0.0625      Successful search (ES-ell)        
+    10         793         23860.3         3.52081          0.0625      Successful search (ES-wcm)        
+    10         794         23854.1           5.625          0.0625      Successful search (ES-wcm)        
+    10         795           23849         5.88637          0.0625      Successful search (ES-wcm)        
+    10         849           23849         5.88637         0.03125          Refine grid             
+    11         850         23851.4         1.81498         0.03125      Successful search (ES-wcm)        
+    11         852           23851         1.94271         0.03125      Successful search (ES-wcm)        
+    11         853         23848.8         2.51109         0.03125      Successful search (ES-ell)        
+    11         854         23843.3         3.75202         0.03125      Successful search (ES-ell)        
+    11         907         23843.3         3.75202        0.015625          Refine grid             
+    12         908         23853.3          1.3398        0.015625      Successful search (ES-ell)        
+    12         909         23851.4         1.49919        0.015625      Successful search (ES-ell)        
+    12         910         23849.6         2.13097        0.015625      Successful search (ES-ell)        
+    12         966         23849.6         2.13097       0.0078125          Refine grid             
+    13         967           23856         1.27008       0.0078125      Successful search (ES-ell)        
+    13         968         23855.1         1.33672       0.0078125      Successful search (ES-ell)        
+    13         969         23854.4         1.62248       0.0078125      Successful search (ES-ell)        
+    13         970         23852.7         2.06383       0.0078125      Successful search (ES-ell)        
+    13         971         23849.9         2.78345       0.0078125      Successful search (ES-ell)        
+    13         972         23848.1          3.5213       0.0078125      Successful search (ES-ell)        
+    13        1026         23848.1          3.5213      0.00390625          Refine grid             Train
+    14        1027         23855.2         1.29935      0.00390625      Successful search (ES-ell)        
+    14        1028         23854.4         1.32176      0.00390625      Successful search (ES-ell)        
+    14        1029         23853.6         1.44564      0.00390625      Successful search (ES-ell)        
+    14        1030           23852         1.44618      0.00390625      Successful search (ES-wcm)        
+    14        1031         23851.2         2.01541      0.00390625      Successful search (ES-wcm)        
+    14        1033         23851.1         2.39115      0.00390625      Successful search (ES-wcm)        
+    14        1082         23848.9         5.85031       0.0078125        Successful poll           Train
+    15        1083         23857.3         1.68597       0.0078125      Successful search (ES-wcm)        
+    15        1142           23857         2.76419        0.015625        Successful poll           
+    16        1145         23857.6         3.07677        0.015625      Successful search (ES-wcm)        
+    16        1151         23856.6         2.43054        0.015625      Successful search (ES-wcm)        
+    16        1153         23856.1         2.36578        0.015625      Successful search (ES-wcm)        
+    16        1155         23855.7         2.27472        0.015625      Successful search (ES-wcm)        
+    16        1156         23855.4         2.35091        0.015625      Successful search (ES-wcm)        
+    16        1157         23854.7         2.65282        0.015625      Successful search (ES-wcm)        
+    16        1201         23854.7         2.65282       0.0078125          Refine grid             
+    17        1202           23857         1.25216       0.0078125      Successful search (ES-wcm)        
+    17        1203         23856.8         1.97363       0.0078125      Successful search (ES-wcm)        
+    17        1217         23856.6         1.06496       0.0078125      Successful search (ES-wcm)        
+    17        1218         23855.1         1.22734       0.0078125      Successful search (ES-wcm)        
+    17        1221         23854.9         1.69637       0.0078125      Successful search (ES-wcm)        
+    17        1222         23852.5         2.73015       0.0078125      Successful search (ES-wcm)        
+    17        1223         23850.3         4.07367       0.0078125      Successful search (ES-wcm)        
+    17        1224         23850.1         3.92152       0.0078125      Successful search (ES-ell)        
+    17        1225         23847.8         3.96356       0.0078125      Successful search (ES-ell)        
+    17        1276         23847.8         3.96356      0.00390625          Refine grid             
+    18        1321         23849.4         4.94079      0.00195312          Refine grid             Train
+    19        1366         23855.9         5.41025     0.000976562          Refine grid             Train
+Optimization terminated: change in the function value less than options['tol_mesh']
+Estimated function value at minimum: 23858.93942585109 ± 0.8760688008801687 (mean ± SEM from 100 samples)
+BADS minimum at: x_min = [ 2.88140e+00  2.97800e+00  4.10340e+00  9.92190e+00  6.58400e+00
+  1.86900e-01  6.32330e+00  1.96000e-02  2.36555e+01  3.49463e+01
+  5.44500e-01  4.33400e-01  3.27100e-01  6.49200e-01 -9.83400e-01], training NLL = 23858.9394
+total f-count: 1466, time: 55.83 min
+
+ Optimization Run 2/2
+Initial params: [1.0161, 7.8352, 10.0868, 5.2627, 1.7913, 40.1031, 3.105, 0.4478, 24.6494, 15.7307, 0.2869, 0.8244, 0.233, 0.1618, 1.1377]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         26151.5             nan               1                                  
+     0          33         25690.1             nan               1          Initial mesh            Initial points
+     0          58         25602.4        0.947722               1        Successful poll           Train
+     1          62         25575.2        0.944828               1      Successful search (ES-wcm)        
+     1          66         25550.4         3.91689               1      Successful search (ES-wcm)        
+     1          67         25549.3         3.92112               1      Successful search (ES-wcm)        
+     1          68           25390         3.89222               1      Successful search (ES-wcm)        
+     1          69         25300.6         3.92627               1      Successful search (ES-wcm)        
+     1          76         25218.5          3.8606               1      Successful search (ES-wcm)        
+     1          81         25214.4         3.44254               1      Successful search (ES-wcm)        
+     1          90         25194.1         3.58733               1      Successful search (ES-wcm)        
+     1          91         25161.6         3.77806               1      Successful search (ES-wcm)        
+     1          93         25133.2         3.65418               1      Successful search (ES-wcm)        
+     1         106         25115.4         2.56851               1      Successful search (ES-wcm)        
+     1         116         25098.1         2.49914               1      Successful search (ES-wcm)        
+     1         118         25084.9         2.45798               1      Successful search (ES-wcm)        
+     1         133           25075         1.98949               1      Successful search (ES-wcm)        
+     1         141         25071.1         1.94096               1      Successful search (ES-ell)        
+     1         149         24961.1         2.11704               1      Successful search (ES-ell)        
+     1         151         24960.5         2.11753               1      Incremental search (ES-ell)        
+     1         155         24957.9         2.11572               1      Successful search (ES-ell)        
+     1         156         24913.3          2.1169               1      Successful search (ES-ell)        
+     1         158         24859.4         22.2534               1      Successful search (ES-ell)        
+     1         159         24759.3         22.4226               1      Successful search (ES-ell)        
+     1         163         24617.7         20.9301               1      Successful search (ES-ell)        
+     1         164         24548.6          22.111               1      Successful search (ES-ell)        
+     1         179         24390.3         20.3873               1      Successful search (ES-ell)        
+     1         184         24386.3         14.0732               1      Successful search (ES-ell)        
+     1         186           24380         15.8639               1      Successful search (ES-ell)        
+     1         187         24360.4         18.7007               1      Successful search (ES-ell)        
+     1         191           24342         13.1625               1      Successful search (ES-ell)        
+     1         192         24340.3          13.691               1      Successful search (ES-ell)        
+     1         196         24284.4         13.8462               1      Successful search (ES-ell)        
+     1         197           24208         16.4358               1      Successful search (ES-ell)        
+     1         198         24195.4         16.6126               1      Successful search (ES-ell)        
+     1         238         24129.8         18.7399               1        Successful poll           
+     2         242         24084.1         16.0442               1      Successful search (ES-ell)        
+     2         292         24062.2         21.3784               1        Successful poll           
+     3         293         23953.2         23.5334               1      Successful search (ES-wcm)        
+     3         345         23953.2         23.5334             0.5          Refine grid             Train
+     4         347         23957.4         18.5875             0.5      Successful search (ES-ell)        
+     4         348         23946.4         25.6823             0.5      Successful search (ES-wcm)        
+     4         350         23819.9         25.7496             0.5      Successful search (ES-wcm)        
+     4         404         23785.9         22.7371               1        Successful poll           
+     5         443         23760.2         27.8085               1        Successful poll           
+     6         481         23759.8         27.6771               1        Successful poll           
+     7         520         23763.9         26.9551             0.5          Refine grid             
+     8         564         23787.2         7.95293           0.125          Refine grid             
+     9         565         23767.1         13.5289           0.125      Successful search (ES-wcm)        
+     9         624         23767.1         13.5289          0.0625          Refine grid             
+    10         625         23775.5         7.45516          0.0625      Successful search (ES-wcm)        
+    10         626         23772.6         8.21497          0.0625      Successful search (ES-wcm)        
+    10         628         23770.9         7.52286          0.0625      Successful search (ES-wcm)        
+    10         629         23770.6         10.7409          0.0625      Successful search (ES-ell)        
+    10         684         23770.6         10.7409         0.03125          Refine grid             
+    11         685         23784.1          7.5389         0.03125      Successful search (ES-ell)        
+    11         686         23782.7         8.59762         0.03125      Successful search (ES-ell)        
+    11         687         23778.2         10.1271         0.03125      Successful search (ES-ell)        
+    11         730         23778.2         10.3792          0.0625        Successful poll           Train
+    12         731         23772.1         8.59729          0.0625      Successful search (ES-ell)        
+    12         790         23772.1         8.59729         0.03125          Refine grid             
+    13         791         23782.1         3.96373         0.03125      Successful search (ES-ell)        
+    13         792         23769.6         6.71945         0.03125      Successful search (ES-ell)        
+    13         793         23767.2         8.01191         0.03125      Successful search (ES-ell)        
+    13         849         23754.2         13.7118          0.0625        Successful poll           
+    14         873         23728.9         12.2918           0.125        Successful poll           Train
+    15         875         23718.9         10.1008           0.125      Successful search (ES-ell)        
+    15         881         23708.4         14.8123           0.125      Successful search (ES-wcm)        
+    15         883         23704.5         13.7987           0.125      Successful search (ES-wcm)        
+    15         885         23697.8         9.14955           0.125      Successful search (ES-wcm)        
+    15         886         23689.4         8.42115           0.125      Successful search (ES-ell)        
+    15         933         23630.8         14.2098            0.25        Successful poll           
+    16         942           23622          15.003            0.25      Successful search (ES-wcm)        
+    16         946         23606.9         13.8905            0.25      Successful search (ES-wcm)        
+    16         956         23587.1         13.0538            0.25      Successful search (ES-wcm)        
+    16        1008         23587.1         13.0538           0.125          Refine grid             
+    17        1053         23599.7         2.93834          0.0625          Refine grid             Train
+    18        1054         23597.9          4.4046          0.0625      Successful search (ES-ell)        
+    18        1056         23595.1         7.10888          0.0625      Successful search (ES-ell)        
+    18        1060         23592.3         6.84869          0.0625      Successful search (ES-wcm)        
+    18        1113         23591.9          2.9324           0.125        Successful poll           Train
+    19        1117         23591.3         11.2175           0.125      Successful search (ES-wcm)        
+    19        1119         23582.6         10.1599           0.125      Successful search (ES-wcm)        
+    19        1124         23578.3         10.3375           0.125      Successful search (ES-wcm)        
+    19        1136         23575.9         5.34245           0.125      Successful search (ES-ell)        
+    19        1137         23575.7         5.27437           0.125      Successful search (ES-ell)        
+    19        1188         23575.7         8.75149          0.0625          Refine grid             Train
+    20        1191           23567         10.2741          0.0625      Successful search (ES-wcm)        
+    20        1192         23557.8         11.1392          0.0625      Successful search (ES-wcm)        
+    20        1195         23556.1         10.9253          0.0625      Successful search (ES-wcm)        
+    20        1201         23554.6         7.98439          0.0625      Successful search (ES-wcm)        
+    20        1248         23554.6         7.98439         0.03125          Refine grid             
+    21        1249         23567.6         8.61514         0.03125      Successful search (ES-wcm)        
+    21        1308         23567.6         8.61514        0.015625          Refine grid             
+    22        1309         23571.1          3.3686        0.015625      Successful search (ES-ell)        
+    22        1310         23560.1         5.29349        0.015625      Successful search (ES-ell)        
+    22        1312         23552.3         5.90646        0.015625      Successful search (ES-ell)        
+    22        1313         23541.8         7.02665        0.015625      Successful search (ES-ell)        
+    22        1368         23541.8         7.02665       0.0078125          Refine grid             
+    23        1369           23540         5.30032       0.0078125      Successful search (ES-wcm)        
+    23        1374         23539.2         3.66542       0.0078125      Successful search (ES-wcm)        
+    23        1375         23539.1         4.63759       0.0078125      Successful search (ES-wcm)        
+    23        1376         23538.8         6.62525       0.0078125      Successful search (ES-wcm)        
+    23        1385         23537.5         3.20669       0.0078125      Successful search (ES-wcm)        
+    23        1386         23536.4         4.19291       0.0078125      Successful search (ES-wcm)        
+    23        1388         23534.6         3.61861       0.0078125      Successful search (ES-ell)        
+    23        1389         23532.9         3.97355       0.0078125      Successful search (ES-ell)        
+    23        1390         23528.9         4.56911       0.0078125      Successful search (ES-ell)        
+    23        1443         23528.9         4.56911      0.00390625          Refine grid             
+    24        1444         23538.9         2.09977      0.00390625      Successful search (ES-wcm)        
+    24        1445         23538.1         2.26511      0.00390625      Successful search (ES-ell)        
+    24        1446         23537.2         2.79872      0.00390625      Successful search (ES-ell)        
+    24        1447         23536.2         3.52927      0.00390625      Successful search (ES-ell)        
+    24        1503         23536.2         3.52927      0.00195312          Refine grid             Train
+    25        1504           23540         1.71787      0.00195312      Successful search (ES-ell)        
+    25        1505         23539.2         1.84829      0.00195312      Successful search (ES-ell)        
+    25        1506         23538.6         1.98078      0.00195312      Successful search (ES-ell)        
+    25        1507         23537.3         2.35903      0.00195312      Successful search (ES-ell)        
+    25        1508         23535.8         2.80989      0.00195312      Successful search (ES-ell)        
+    25        1509         23533.7         3.59816      0.00195312      Successful search (ES-ell)        
+    25        1510         23531.1         4.59205      0.00195312      Successful search (ES-ell)        
+    25        1511         23530.4         5.90555      0.00195312      Successful search (ES-ell)        
+    25        1512           23527         7.23833      0.00195312      Successful search (ES-ell)        
+    25        1563           23527         7.23833     0.000976562          Refine grid             Train
+Optimization terminated: change in the function value less than options['tol_mesh']
+Estimated function value at minimum: 23536.626016162845 ± 1.1131235770776047 (mean ± SEM from 100 samples)
+BADS minimum at: x_min = [ 0.5764  3.0401  4.0017  7.9518  4.8213  1.446   2.2247  0.2167 42.7354
+ 22.529   0.4014  0.435   0.3568  0.3971 -0.5753], training NLL = 23536.626
+total f-count: 1663, time: 63.2 min
+
+ ------- Finish Optimization for Subject 2 ---------- 
+
+ ------- Start Optimization for Subject 3 ---------- 
+
+ Cross Validation fold 0/1
+
+ -- Start Optimization: method BADS --
+
+ Optimization Run 1/2
+Initial params: [1.4113, 7.1655, 5.6723, 13.1087, -3.3734, 2.0304, 3.5141, 0.5876, 19.0423, 27.5525, 0.1089, 0.4355, 0.2044, 0.2623, 1.0034]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         24925.6             nan               1                                  
+     0          33         24925.6             nan               1          Initial mesh            Initial points
+     0          34         24922.7        0.981164               1        Successful poll           Train
+     1          37         24802.2        0.980702               1      Successful search (ES-wcm)        
+     1          38         24762.9         0.98108               1      Successful search (ES-ell)        
+     1          39         24754.3        0.981141               1      Successful search (ES-ell)        
+     1          46         24658.6        0.978756               1      Successful search (ES-ell)        
+     1          53         24654.3        0.978627               1      Successful search (ES-ell)        
+     1          74         24638.6        0.917002               1      Successful search (ES-ell)        
+     1          75         24614.5        0.897579               1      Successful search (ES-ell)        
+     1         117         24560.5        0.823349               1        Successful poll           Train
+     2         119         24532.7        0.823339               1      Successful search (ES-ell)        
+     2         140         24531.6         2.08777               1      Successful search (ES-ell)        
+     2         186         24524.4         12.9248               1        Successful poll           
+     3         189         24524.2         9.54709               1      Incremental search (ES-ell)        
+     3         224         24519.6         7.58377               1        Successful poll           
+     4         226         24506.4         9.12265               1      Successful search (ES-ell)        
+     4         277         24506.4         9.12265             0.5          Refine grid             Train
+     5         284           24510         8.03089             0.5      Successful search (ES-wcm)        
+     5         291         24491.3         7.23309             0.5      Successful search (ES-wcm)        
+     5         334         24491.3         7.23309            0.25          Refine grid             Train
+     6         340           24496         5.48771            0.25      Successful search (ES-wcm)        
+     6         393         24494.9         3.32557             0.5        Successful poll           
+     7         407         24492.7         5.25315             0.5      Incremental search (ES-wcm)        
+     7         435         24488.4         6.93062               1        Successful poll           
+     8         472           24486         6.12283               1        Successful poll           Train
+     9         482         24480.3         4.81161               1      Successful search (ES-wcm)        
+     9         485         24477.3          3.4611               1      Successful search (ES-ell)        
+     9         486         24474.6         3.12004               1      Successful search (ES-ell)        
+     9         492         24466.2         4.35225               1      Successful search (ES-ell)        
+     9         493         24456.4           4.448               1      Successful search (ES-ell)        
+     9         539         24456.4           4.448             0.5          Refine grid             
+    10         543         24459.2         2.99512             0.5      Successful search (ES-ell)        
+    10         596         24459.2         2.99512            0.25          Refine grid             
+    11         597         24459.8         2.94208            0.25      Successful search (ES-ell)        
+    11         601         24459.8         2.29594            0.25      Incremental search (ES-ell)        
+    11         606         24459.2         1.82819            0.25      Successful search (ES-ell)        
+    11         609         24458.2         1.57157            0.25      Successful search (ES-ell)        
+    11         610         24457.8         1.86442            0.25      Successful search (ES-ell)        
+    11         611           24457         2.30675            0.25      Successful search (ES-ell)        
+    11         622         24456.8         1.62778            0.25      Successful search (ES-ell)        
+    11         623         24456.7         1.59998            0.25      Incremental search (ES-ell)        
+    11         624         24454.4         1.72206            0.25      Successful search (ES-ell)        
+    11         625         24453.9          1.9577            0.25      Successful search (ES-ell)        
+    11         670         24453.9          1.9577           0.125          Refine grid             
+    12         671         24455.1         1.72684           0.125      Successful search (ES-ell)        
+    12         673         24454.8         1.98761           0.125      Successful search (ES-ell)        
+    12         729         24454.3          1.4118            0.25        Successful poll           Train
+    13         773         24454.1         1.34809           0.125          Refine grid             Train
+    14         775           24456         1.47517           0.125      Successful search (ES-ell)        
+    14         777         24446.1         2.38431           0.125      Successful search (ES-ell)        
+    14         832         24446.1         2.38431          0.0625          Refine grid             
+    15         833         24455.6         1.06171          0.0625      Successful search (ES-ell)        
+    15         835         24455.5         1.62031          0.0625      Successful search (ES-ell)        
+    15         837           24455         1.51142          0.0625      Successful search (ES-ell)        
+    15         891           24455         1.51142         0.03125          Refine grid             
+    16         897         24456.4        0.787408         0.03125      Successful search (ES-wcm)        
+    16         898         24455.5         1.24282         0.03125      Successful search (ES-wcm)        
+    16         899         24455.4          1.9369         0.03125      Successful search (ES-wcm)        
+    16         906         24455.2         1.28764         0.03125      Successful search (ES-wcm)        
+    16         913           24455         1.15565         0.03125      Successful search (ES-wcm)        
+    16         914         24454.2         1.22987         0.03125      Successful search (ES-wcm)        
+    16         965         24454.2         1.22987        0.015625          Refine grid             
+    17         966         24456.5        0.824846        0.015625      Successful search (ES-ell)        
+    17         968         24456.3        0.972419        0.015625      Successful search (ES-ell)        
+    17         976         24456.1        0.835354        0.015625      Successful search (ES-ell)        
+    17         977           24456        0.851222        0.015625      Successful search (ES-ell)        
+    17         978           24456        0.870252        0.015625      Successful search (ES-ell)        
+    17         979         24455.7        0.923172        0.015625      Successful search (ES-ell)        
+    17         980         24455.3         0.96441        0.015625      Successful search (ES-ell)        
+    17         982         24454.5         1.03392        0.015625      Successful search (ES-ell)        
+    17        1040         24454.5         1.03392       0.0078125          Refine grid             
+    18        1041           24457        0.607622       0.0078125      Successful search (ES-ell)        
+    18        1056         24456.8        0.583549       0.0078125      Successful search (ES-ell)        
+    18        1057         24456.4        0.695387       0.0078125      Successful search (ES-ell)        
+    18        1058         24456.1        0.966555       0.0078125      Successful search (ES-ell)        
+    18        1059         24455.3          1.3597       0.0078125      Successful search (ES-ell)        
+    18        1060         24454.9         2.01303       0.0078125      Successful search (ES-ell)        
+    18        1061         24454.8         2.46964       0.0078125      Successful search (ES-ell)        
+    18        1115         24454.8         2.46964      0.00390625          Refine grid             
+    19        1116         24456.6        0.609675      0.00390625      Successful search (ES-ell)        
+    19        1117         24456.4        0.635883      0.00390625      Successful search (ES-ell)        
+    19        1118         24456.3        0.725429      0.00390625      Successful search (ES-ell)        
+    19        1122         24456.2        0.742698      0.00390625      Successful search (ES-ell)        
+    19        1156         24455.6         1.67947       0.0078125        Successful poll           Train
+    20        1157         24452.8          1.5071       0.0078125      Successful search (ES-wcm)        
+    20        1216         24452.8          1.5071      0.00390625          Refine grid             
+    21        1217         24456.3        0.887707      0.00390625      Successful search (ES-wcm)        
+    21        1231         24456.2         0.64502      0.00390625      Successful search (ES-wcm)        
+    21        1232         24456.2        0.463351      0.00390625      Successful search (ES-ell)        
+    21        1233         24456.1        0.720303      0.00390625      Successful search (ES-wcm)        
+    21        1234           24456         1.17104      0.00390625      Successful search (ES-wcm)        
+    21        1291           24456         1.17104      0.00195312          Refine grid             
+    22        1292         24456.1        0.553015      0.00195312      Successful search (ES-wcm)        
+    22        1294           24456        0.613961      0.00195312      Successful search (ES-wcm)        
+    22        1296         24455.9        0.696098      0.00195312      Successful search (ES-wcm)        
+    22        1297         24455.8        0.830619      0.00195312      Successful search (ES-wcm)        
+    22        1298         24455.7         1.01655      0.00195312      Successful search (ES-wcm)        
+    22        1351         24454.7         1.46277      0.00390625        Successful poll           
+    23        1357         24455.2        0.832888      0.00390625      Successful search (ES-wcm)        
+    23        1411           24454         1.23561       0.0078125        Successful poll           Train
+    24        1456         24454.1          1.1517      0.00390625          Refine grid             Train
+    25        1457         24455.6        0.526042      0.00390625      Successful search (ES-ell)        
+    25        1458         24455.4        0.590476      0.00390625      Successful search (ES-ell)        
+    25        1459         24455.4         0.73729      0.00390625      Successful search (ES-ell)        
+    25        1516         24455.2        0.996412       0.0078125        Successful poll           
+    26        1517         24455.5        0.583298       0.0078125      Successful search (ES-ell)        
+    26        1518         24455.2        0.810021       0.0078125      Successful search (ES-ell)        
+    26        1519         24455.1         1.13356       0.0078125      Successful search (ES-ell)        
+    26        1520         24454.5         1.46859       0.0078125      Successful search (ES-ell)        
+    26        1576         24454.5         1.46859      0.00390625          Refine grid             
+    27        1621         24453.8         3.39705       0.0078125        Successful poll           Train
+    28        1654         24453.9         1.75422        0.015625        Successful poll           Train
+    29        1655         24455.8         1.62969        0.015625      Successful search (ES-ell)        
+    29        1657         24454.8         1.94947        0.015625      Successful search (ES-ell)        
+    29        1714         24451.7         2.42068         0.03125        Successful poll           
+    30        1759         24455.6         2.27637        0.015625          Refine grid             Train
+    31        1760         24455.7         1.71185        0.015625      Successful search (ES-ell)        
+    31        1819         24455.7         1.71185       0.0078125          Refine grid             
+    32        1864         24455.9        0.326573      0.00390625          Refine grid             
+    33        1909         24456.2        0.426127      0.00195312          Refine grid             
+    34        1949         24452.5         3.49161      0.00390625        Successful poll           Train
+    35        1950         24456.1        0.995781      0.00390625      Successful search (ES-wcm)        
+    35        1958         24456.1        0.786471      0.00390625      Successful search (ES-ell)        
+    35        1959         24455.9         0.77986      0.00390625      Successful search (ES-ell)        
+    35        1967         24455.9        0.801732      0.00390625      Successful search (ES-wcm)        
+    35        1974         24455.9        0.693498      0.00390625      Successful search (ES-ell)        
+    35        1976         24455.8        0.692702      0.00390625      Successful search (ES-wcm)        
+    35        1977         24455.7        0.702445      0.00390625      Successful search (ES-wcm)        
+    35        1980         24455.7        0.717906      0.00390625      Successful search (ES-ell)        
+    35        1985         24455.7        0.642843      0.00390625      Successful search (ES-ell)        
+    35        1995         24455.7        0.625566      0.00390625      Successful search (ES-ell)        
+    35        1996         24455.6        0.667248      0.00390625      Successful search (ES-ell)        
+    35        1997         24455.4        0.818005      0.00390625      Successful search (ES-ell)        
+    35        2000         24455.2        0.896303      0.00390625      Successful search (ES-ell)        
+    35        2001         24455.1         1.06582      0.00390625      Successful search (ES-ell)        
+    35        2054         24453.7         2.65859       0.0078125        Successful poll           Train
+    36        2058         24455.9        0.695945       0.0078125      Successful search (ES-ell)        
+    36        2059         24455.6         1.03802       0.0078125      Successful search (ES-ell)        
+    36        2062         24454.4          1.3558       0.0078125      Successful search (ES-wcm)        
+    36        2063         24453.6         1.42091       0.0078125      Successful search (ES-ell)        
+    36        2072         24453.6         1.73805       0.0078125      Successful search (ES-wcm)        
+    36        2129         24453.6         1.73805      0.00390625          Refine grid             Train
+    37        2130           24456        0.809466      0.00390625      Successful search (ES-ell)        
+    37        2131         24455.6         1.40241      0.00390625      Successful search (ES-ell)        
+    37        2132         24454.6         1.91927      0.00390625      Successful search (ES-ell)        
+    37        2135         24453.5         1.67231      0.00390625      Successful search (ES-ell)        
+    37        2189         24453.5         1.67231      0.00195312          Refine grid             Train
+    38        2234         24456.1        0.306074     0.000976562          Refine grid             Train
+Optimization terminated: change in the function value less than options['tol_mesh']
+Estimated function value at minimum: 24455.861523909945 ± 0.3304650353633558 (mean ± SEM from 100 samples)
+BADS minimum at: x_min = [ 0.5197  6.4886  2.6556 13.8839 -5.8708  7.9189  1.7922  0.61   15.1776
+ 36.3008  0.9762  0.6911  0.135   0.1317 -0.3117], training NLL = 24455.8615
+total f-count: 2334, time: 87.93 min
+
+ Optimization Run 2/2
+Initial params: [0.2022, 5.245, 2.572, 6.9033, 4.0641, 22.1961, 4.2723, 0.3227, 15.7665, 15.2233, 0.763, 0.282, 0.2003, 0.1815, 0.0327]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         25182.8             nan               1                                  
+     0          33         24959.9             nan               1          Initial mesh            Initial points
+     0          59         24839.1        0.967785               1        Successful poll           Train
+     1          61         24735.7        0.967716               1      Successful search (ES-ell)        
+     1          65           24683        0.347829               1      Successful search (ES-ell)        
+     1          70           24646        0.345478               1      Successful search (ES-ell)        
+     1          79         24586.3        0.346405               1      Successful search (ES-ell)        
+     1          83         24571.5        0.334931               1      Successful search (ES-ell)        
+     1          94         24570.1        0.313769               1      Successful search (ES-ell)        
+     1          98         24560.7        0.183428               1      Successful search (ES-ell)        
+     1         101         24557.8        0.183393               1      Successful search (ES-ell)        
+     1         113         24554.2        0.175223               1      Successful search (ES-ell)        
+     1         118         24553.4        0.121458               1      Incremental search (ES-ell)        
+     1         119         24548.6        0.145493               1      Successful search (ES-ell)        
+     1         122         24524.3        0.183526               1      Successful search (ES-ell)        
+     1         158         24521.5         6.27735               1        Successful poll           Train
+     2         189         24516.4         8.80236               1        Successful poll           Train
+     3         211         24508.5          3.5676               1        Successful poll           Train
+     4         214         24497.9         6.54313               1      Successful search (ES-wcm)        
+     4         232         24495.1         5.85593               1      Successful search (ES-ell)        
+     4         233         24475.3         6.24727               1      Successful search (ES-ell)        
+     4         279         24470.3         6.60704               1        Successful poll           
+     5         317         24468.8         2.40864               1        Successful poll           Train
+     6         355         24467.9         2.52746             0.5          Refine grid             Train
+     7         365         24468.1          2.2248             0.5      Successful search (ES-wcm)        
+     7         366         24466.7         2.77165             0.5      Successful search (ES-wcm)        
+     7         368         24466.2         2.25981             0.5      Successful search (ES-wcm)        
+     7         370         24465.4         1.99569             0.5      Successful search (ES-wcm)        
+     7         376         24465.4         2.31426             0.5      Incremental search (ES-ell)        
+     7         381           24464         2.43405             0.5      Successful search (ES-wcm)        
+     7         382         24463.6         2.49111             0.5      Incremental search (ES-ell)        
+     7         384         24462.5         2.28237             0.5      Successful search (ES-ell)        
+     7         389           24462         2.36409             0.5      Successful search (ES-ell)        
+     7         393         24461.7         1.73604             0.5      Incremental search (ES-ell)        
+     7         417         24455.4         3.36289               1        Successful poll           Train
+     8         455         24454.6          3.0815             0.5          Refine grid             Train
+     9         463         24455.3         1.30982             0.5      Successful search (ES-ell)        
+     9         466           24455         1.18922             0.5      Incremental search (ES-ell)        
+     9         469         24454.7         1.22386             0.5      Incremental search (ES-ell)        
+     9         474         24453.7         2.41224             0.5      Successful search (ES-ell)        
+     9         478         24453.5         2.04012             0.5      Incremental search (ES-ell)        
+     9         480         24450.7         2.28696             0.5      Successful search (ES-ell)        
+     9         525         24450.7         2.28696            0.25          Refine grid             
+    10         526         24449.1         2.42367            0.25      Successful search (ES-ell)        
+    10         527         24449.1         2.92126            0.25      Incremental search (ES-ell)        
+    10         569         24409.5         3.20152             0.5        Successful poll           Train
+    11         572         24408.1         3.44927             0.5      Successful search (ES-ell)        
+    11         576         24402.4         3.26164             0.5      Successful search (ES-ell)        
+    11         598         24402.1         2.94153             0.5      Incremental search (ES-wcm)        
+    11         624         24402.1         2.94153            0.25          Refine grid             
+    12         631         24402.1         1.34441            0.25      Successful search (ES-ell)        
+    12         632         24400.8         1.75597            0.25      Successful search (ES-ell)        
+    12         682         24398.9         3.50536             0.5        Successful poll           
+    13         687         24396.7          3.3116             0.5      Successful search (ES-ell)        
+    13         688         24395.6         3.41414             0.5      Successful search (ES-ell)        
+    13         737         24395.6         3.41414            0.25          Refine grid             Train
+    14         780         24394.8         2.88628           0.125          Refine grid             Train
+    15         824         24393.6         3.23932            0.25        Successful poll           Train
+    16         866         24390.3         1.67723             0.5        Successful poll           Train
+    17         906         24390.1         1.59048            0.25          Refine grid             Train
+    18         911         24396.3         1.46009            0.25      Successful search (ES-ell)        
+    18         964         24396.3         1.46009           0.125          Refine grid             
+    19        1008         24397.5        0.653961          0.0625          Refine grid             Train
+    20        1017         24399.6         2.04205          0.0625      Successful search (ES-wcm)        
+    20        1019         24398.1         1.87619          0.0625      Successful search (ES-wcm)        
+    20        1020         24397.6         2.67449          0.0625      Successful search (ES-wcm)        
+    20        1067         24397.6         2.67449         0.03125          Refine grid             Train
+    21        1070         24400.4         1.64044         0.03125      Successful search (ES-wcm)        
+    21        1072         24399.9         1.92802         0.03125      Successful search (ES-wcm)        
+    21        1126         24399.9         1.92802        0.015625          Refine grid             
+    22        1127         24396.6         2.27363        0.015625      Successful search (ES-wcm)        
+    22        1129         24394.2         1.55732        0.015625      Successful search (ES-wcm)        
+    22        1142           24393         1.59027        0.015625      Successful search (ES-wcm)        
+    22        1200           24393         1.59027       0.0078125          Refine grid             
+    23        1201         24397.6        0.795158       0.0078125      Successful search (ES-wcm)        
+    23        1202         24396.7        0.974404       0.0078125      Successful search (ES-wcm)        
+    23        1204         24396.5        0.984972       0.0078125      Successful search (ES-wcm)        
+    23        1205           24396         1.27551       0.0078125      Successful search (ES-wcm)        
+    23        1211         24395.2        0.911303       0.0078125      Successful search (ES-ell)        
+    23        1212         24394.8         0.87833       0.0078125      Successful search (ES-ell)        
+    23        1213         24394.5        0.849103       0.0078125      Successful search (ES-ell)        
+    23        1214         24394.3        0.839352       0.0078125      Successful search (ES-ell)        
+    23        1215         24393.7        0.897961       0.0078125      Successful search (ES-ell)        
+    23        1259         24393.7        0.897961      0.00390625          Refine grid             
+    24        1260         24397.4        0.476173      0.00390625      Successful search (ES-ell)        
+    24        1261         24396.2        0.467766      0.00390625      Successful search (ES-wcm)        
+    24        1262         24395.1           0.552      0.00390625      Successful search (ES-wcm)        
+    24        1263           24395        0.671006      0.00390625      Successful search (ES-wcm)        
+    24        1264         24394.6        0.850425      0.00390625      Successful search (ES-wcm)        
+    24        1266         24394.1        0.817259      0.00390625      Successful search (ES-wcm)        
+    24        1319         24394.1        0.817259      0.00195312          Refine grid             
+    25        1320         24397.1          0.5257      0.00195312      Successful search (ES-wcm)        
+    25        1321           24397        0.556932      0.00195312      Successful search (ES-wcm)        
+    25        1322         24396.9        0.635183      0.00195312      Successful search (ES-wcm)        
+    25        1323         24396.8        0.767312      0.00195312      Successful search (ES-wcm)        
+    25        1324         24396.4         0.99336      0.00195312      Successful search (ES-wcm)        
+    25        1325         24396.4         1.26231      0.00195312      Successful search (ES-wcm)        
+    25        1326           24396         1.55689      0.00195312      Successful search (ES-wcm)        
+    25        1327         24393.8         1.63887      0.00195312      Successful search (ES-ell)        
+    25        1328         24392.6         1.85202      0.00195312      Successful search (ES-ell)        
+    25        1329         24391.9         2.18163      0.00195312      Successful search (ES-ell)        
+    25        1379         24391.9         2.18163     0.000976562          Refine grid             Train
+Optimization terminated: change in the function value less than options['tol_mesh']
+Estimated function value at minimum: 24397.78011523458 ± 0.30703023590085265 (mean ± SEM from 100 samples)
+BADS minimum at: x_min = [ 1.08870e+00  4.43670e+00  1.87600e+00  2.00000e-04 -4.42000e+00
+  9.35120e+00  2.00000e-04  8.24000e-02  4.72071e+01  1.84849e+01
+  9.97100e-01  3.81400e-01  2.11500e-01  1.62200e-01 -8.02100e-01], training NLL = 24397.7801
+total f-count: 1479, time: 55.2 min
+
+ ------- Finish Optimization for Subject 3 ---------- 
+
+ ------- Start Optimization for Subject 5 ---------- 
+
+ Cross Validation fold 0/1
+
+ -- Start Optimization: method BADS --
+
+ Optimization Run 1/2
+Initial params: [1.9602, 7.0078, 6.9713, 18.371, -4.2775, 18.9921, 3.6211, 0.2863, 29.94, 28.0769, 0.7835, 0.1102, 0.1408, 0.211, -0.1436]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         25625.7             nan               1                                  
+     0          33         25085.5             nan               1          Initial mesh            Initial points
+     0          59         25014.4         1.02234               1        Successful poll           Train
+     1          62         25009.1         1.02186               1      Successful search (ES-wcm)        
+     1          63         24972.2         1.02186               1      Successful search (ES-wcm)        
+     1          67         24951.1         1.09957               1      Successful search (ES-wcm)        
+     1          68         24899.4         1.09964               1      Successful search (ES-wcm)        
+     1          73         24898.8         1.09934               1      Incremental search (ES-wcm)        
+     1          75         24832.2         1.09945               1      Successful search (ES-wcm)        
+     1          76         24738.1         1.09953               1      Successful search (ES-wcm)        
+     1          78         24733.1         1.09954               1      Successful search (ES-ell)        
+     1          82         24709.2         1.09904               1      Successful search (ES-wcm)        
+     1          83         24654.5         1.09813               1      Successful search (ES-wcm)        
+     1          86         24640.2         1.09623               1      Successful search (ES-wcm)        
+     1          89         24585.7         1.09868               1      Successful search (ES-wcm)        
+     1          90           24550          1.0984               1      Successful search (ES-wcm)        
+     1          93         24515.8         1.09812               1      Successful search (ES-wcm)        
+     1          97         24503.1        0.998288               1      Successful search (ES-wcm)        
+     1          99         24441.4        0.997975               1      Successful search (ES-wcm)        
+     1         101         24358.8         0.99817               1      Successful search (ES-wcm)        
+     1         104         24267.6        0.997982               1      Successful search (ES-wcm)        
+     1         114         24241.5        0.984968               1      Successful search (ES-wcm)        
+     1         124         24238.4        0.987982               1      Successful search (ES-wcm)        
+     1         131         24232.9         8.21687               1      Successful search (ES-wcm)        
+     1         137         24169.6         16.5105               1      Successful search (ES-wcm)        
+     1         144           24169         15.6845               1      Incremental search (ES-wcm)        
+     1         146         24160.2         12.5908               1      Successful search (ES-wcm)        
+     1         148         24141.8         15.1237               1      Successful search (ES-wcm)        
+     1         149           24082          15.961               1      Successful search (ES-wcm)        
+     1         158           24055          22.379               1      Successful search (ES-wcm)        
+     1         159         24019.8         20.4028               1      Successful search (ES-wcm)        
+     1         189         24011.2         16.3966               1        Successful poll           Train
+     2         190         23853.3         25.6174               1      Successful search (ES-wcm)        
+     2         194         23797.3         20.2671               1      Successful search (ES-wcm)        
+     2         197         23768.3         18.5168               1      Successful search (ES-wcm)        
+     2         199         23756.1         15.6829               1      Successful search (ES-wcm)        
+     2         200         23749.4         17.3257               1      Successful search (ES-wcm)        
+     2         201         23741.8         19.8604               1      Successful search (ES-wcm)        
+     2         203         23724.8         19.2132               1      Successful search (ES-wcm)        
+     2         204         23702.8         22.1231               1      Successful search (ES-wcm)        
+     2         205         23693.2         24.2874               1      Successful search (ES-ell)        
+     2         207         23639.1         21.9415               1      Successful search (ES-ell)        
+     2         209         23583.2          25.191               1      Successful search (ES-ell)        
+     2         211         23526.8           24.18               1      Successful search (ES-ell)        
+     2         212         23464.4         24.7478               1      Successful search (ES-ell)        
+     2         242         23463.4         10.7428               1        Successful poll           
+     3         243         23461.7         21.8362               1      Successful search (ES-ell)        
+     3         245         23424.8          21.478               1      Successful search (ES-ell)        
+     3         265           23418         20.1916               1      Successful search (ES-wcm)        
+     3         268         23404.1         13.9819               1      Successful search (ES-wcm)        
+     3         307         23216.6         25.8727               1        Successful poll           
+     4         312           23186         24.7966               1      Successful search (ES-wcm)        
+     4         316         23168.2         23.7639               1      Successful search (ES-wcm)        
+     4         319         23146.5         18.1086               1      Successful search (ES-wcm)        
+     4         329         23127.5         16.1901               1      Successful search (ES-wcm)        
+     4         370         23109.1         19.5792               1        Successful poll           
+     5         387         23113.1         22.5175               1        Successful poll           Train
+     6         422         23110.8         29.1427               1        Successful poll           Train
+     7         437           23113         9.92788               1      Incremental search (ES-ell)        
+     7         457         23109.1         15.6186               1        Successful poll           
+     8         464         23105.7         14.8428               1      Successful search (ES-ell)        
+     8         476         23099.1         18.8156               1      Successful search (ES-ell)        
+     8         520         23091.1         9.03519               1        Successful poll           
+     9         554         23092.6         8.96611             0.5          Refine grid             Train
+    10         558         23104.4         8.56143             0.5      Incremental search (ES-wcm)        
+    10         568         23102.8         6.34968             0.5      Successful search (ES-wcm)        
+    10         569         23100.1         6.92153             0.5      Successful search (ES-wcm)        
+    10         583         23099.6         5.17147             0.5      Successful search (ES-ell)        
+    10         584         23098.7         5.17264             0.5      Successful search (ES-ell)        
+    10         588           23098         14.5226             0.5      Successful search (ES-wcm)        
+    10         605           23098         8.58214             0.5      Incremental search (ES-wcm)        
+    10         607         23095.8         10.5982             0.5      Successful search (ES-wcm)        
+    10         609         23092.3         11.6436             0.5      Successful search (ES-wcm)        
+    10         610           23087         12.7864             0.5      Successful search (ES-ell)        
+    10         622         23077.8         9.30877             0.5      Successful search (ES-ell)        
+    10         623         23077.1         10.1116             0.5      Successful search (ES-ell)        
+    10         626         23076.2         9.24989             0.5      Successful search (ES-ell)        
+    10         636         23068.9         8.10305             0.5      Successful search (ES-ell)        
+    10         643         23064.2         11.0339             0.5      Successful search (ES-wcm)        
+    10         659         23047.3         8.60911             0.5      Successful search (ES-wcm)        
+    10         668         23043.8         6.89645             0.5      Successful search (ES-ell)        
+    10         687         23041.2         6.83173             0.5      Successful search (ES-wcm)        
+    10         689         23035.4         7.67652             0.5      Successful search (ES-wcm)        
+    10         700         23031.2         8.20386             0.5      Successful search (ES-wcm)        
+    10         702         23030.6         8.01299             0.5      Successful search (ES-wcm)        
+    10         745         23030.6         8.01299            0.25          Refine grid             
+    11         788         23052.2         4.06878           0.125          Refine grid             
+    12         791         23079.1         5.03293           0.125      Successful search (ES-wcm)        
+    12         844         23071.7          10.424            0.25        Successful poll           
+    13         854           23068         11.6435            0.25      Successful search (ES-wcm)        
+    13         856         23061.8         11.6604            0.25      Successful search (ES-wcm)        
+    13         867         23056.3         7.99058            0.25      Successful search (ES-ell)        
+    13         880         23054.7         8.85226            0.25      Successful search (ES-ell)        
+    13         884         23051.6         6.96097            0.25      Successful search (ES-ell)        
+    13         885         23034.3         8.19639            0.25      Successful search (ES-ell)        
+    13         888         23025.9         7.50113            0.25      Successful search (ES-ell)        
+    13         891         23005.2         11.1246            0.25      Successful search (ES-ell)        
+    13         910         23002.2         7.27331            0.25      Successful search (ES-ell)        
+    13         962         22959.3         14.0184             0.5        Successful poll           Train
+    14        1003           22959         14.0031            0.25          Refine grid             Train
+    15        1007         22986.5         10.9112            0.25      Successful search (ES-ell)        
+    15        1010         22985.9         9.61256            0.25      Successful search (ES-ell)        
+    15        1011         22983.6         12.4472            0.25      Successful search (ES-ell)        
+    15        1016         22981.4         9.42352            0.25      Successful search (ES-ell)        
+    15        1018           22968         9.50472            0.25      Successful search (ES-ell)        
+    15        1025         22961.9         8.34065            0.25      Successful search (ES-ell)        
+    15        1026         22956.2         9.88798            0.25      Successful search (ES-ell)        
+    15        1036         22940.9         10.9131            0.25      Successful search (ES-ell)        
+    15        1092         22940.9         10.9131           0.125          Refine grid             Train
+    16        1095         22942.4         11.0009           0.125      Successful search (ES-wcm)        
+    16        1098         22938.8         8.88599           0.125      Successful search (ES-wcm)        
+    16        1102         22930.4         8.54311           0.125      Successful search (ES-wcm)        
+    16        1151         22930.4         8.54311          0.0625          Refine grid             
+    17        1152         22913.8         6.92489          0.0625      Successful search (ES-ell)        
+    17        1154         22900.7         7.54743          0.0625      Successful search (ES-ell)        
+    17        1160           22889         7.03144          0.0625      Successful search (ES-wcm)        
+    17        1162         22885.2         7.99351          0.0625      Successful search (ES-wcm)        
+    17        1211         22884.8         9.64077           0.125        Successful poll           
+    18        1255         22888.2         4.52772            0.25        Successful poll           Train
+    19        1264         22878.9         3.71686            0.25      Successful search (ES-ell)        
+    19        1269         22876.9         4.33051            0.25      Successful search (ES-wcm)        
+    19        1312         22876.9         4.33051           0.125          Refine grid             
+    20        1317         22880.6         4.34865           0.125      Successful search (ES-ell)        
+    20        1371         22880.6         4.34865          0.0625          Refine grid             
+    21        1375         22878.5         3.09608          0.0625      Successful search (ES-ell)        
+    21        1379         22878.5         3.00139          0.0625      Successful search (ES-ell)        
+    21        1380         22878.1         2.98446          0.0625      Successful search (ES-ell)        
+    21        1382         22877.3         2.96929          0.0625      Successful search (ES-ell)        
+    21        1386         22876.5         4.64529          0.0625      Successful search (ES-wcm)        
+    21        1393         22874.7         4.08289          0.0625      Successful search (ES-ell)        
+    21        1394         22872.9         4.27422          0.0625      Successful search (ES-ell)        
+    21        1395         22859.6          4.5923          0.0625      Successful search (ES-ell)        
+    21        1446         22859.6          4.5923         0.03125          Refine grid             
+    22        1447         22877.8         4.00191         0.03125      Successful search (ES-ell)        
+    22        1506         22877.8         4.00191        0.015625          Refine grid             
+    23        1507         22883.5         2.85905        0.015625      Successful search (ES-ell)        
+    23        1508         22880.7         4.47652        0.015625      Successful search (ES-ell)        
+    23        1553         22861.5         8.69174         0.03125        Successful poll           Train
+    24        1598         22859.4         8.68618        0.015625          Refine grid             Train
+    25        1643         22886.4         2.22419       0.0078125          Refine grid             Train
+    26        1688         22877.5         2.43984      0.00390625          Refine grid             Train
+    27        1689         22871.8         2.61963      0.00390625      Successful search (ES-wcm)        
+    27        1690         22871.5         3.24566      0.00390625      Successful search (ES-wcm)        
+    27        1691         22869.7         4.37927      0.00390625      Successful search (ES-wcm)        
+    27        1695         22868.8         3.82299      0.00390625      Successful search (ES-ell)        
+    27        1696         22863.9         4.41246      0.00390625      Successful search (ES-ell)        
+    27        1697         22860.9         5.49254      0.00390625      Successful search (ES-ell)        
+    27        1698         22858.2         6.43814      0.00390625      Successful search (ES-ell)        
+    27        1699         22855.8          8.1037      0.00390625      Successful search (ES-ell)        
+    27        1701         22851.1         7.02526      0.00390625      Successful search (ES-ell)        
+    27        1702         22845.8          8.8536      0.00390625      Successful search (ES-ell)        
+    27        1748         22845.8          8.8536      0.00195312          Refine grid             
+    28        1749         22860.6          2.2532      0.00195312      Successful search (ES-ell)        
+    28        1750         22859.2         2.35963      0.00195312      Successful search (ES-ell)        
+    28        1751         22857.4         2.70866      0.00195312      Successful search (ES-ell)        
+    28        1752         22853.1         3.65982      0.00195312      Successful search (ES-ell)        
+    28        1754         22850.9         4.50075      0.00195312      Successful search (ES-ell)        
+    28        1758         22849.3         3.89627      0.00195312      Successful search (ES-wcm)        
+    28        1808         22849.3         3.89627     0.000976562          Refine grid             Train
+Optimization terminated: change in the function value less than options['tol_mesh']
+Estimated function value at minimum: 22855.765836621773 ± 1.302349670284967 (mean ± SEM from 100 samples)
+BADS minimum at: x_min = [ 3.5494  4.5148  4.2106  9.2893  6.874   1.4167  3.9978  0.0883 12.4864
+ 37.4937  0.6708  0.3678  0.2898  0.1569 -0.6938], training NLL = 22855.7658
+total f-count: 1908, time: 71.61 min
+
+ Optimization Run 2/2
+Initial params: [0.2304, 8.1995, 5.0684, 14.8918, -1.7347, 37.8689, 2.3508, 0.1342, 19.4331, 21.3808, 0.3008, 0.6124, 0.1584, 0.1331, 1.3019]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         25536.8             nan               1                                  
+     0          33         25084.7             nan               1          Initial mesh            Initial points
+     0          58         25016.3        0.998742               1        Successful poll           Train
+     1          60         24932.7        0.999115               1      Successful search (ES-wcm)        
+     1          63           24841         0.99858               1      Successful search (ES-wcm)        
+     1          68         24834.4         1.03292               1      Successful search (ES-wcm)        
+     1          72         24808.9         1.02976               1      Successful search (ES-wcm)        
+     1          76         24669.6         1.03267               1      Successful search (ES-wcm)        
+     1          82         24645.2         1.02472               1      Successful search (ES-wcm)        
+     1          83         24623.3         1.02607               1      Successful search (ES-ell)        
+     1          89         24532.6         1.03274               1      Successful search (ES-ell)        
+     1          93         24431.7         1.03025               1      Successful search (ES-ell)        
+     1          99         24413.6        0.935736               1      Successful search (ES-ell)        
+     1         127         24358.2        0.939365               1        Successful poll           Train
+     2         133         24355.8         3.81093               1      Successful search (ES-ell)        
+     2         137         24354.8         3.51861               1      Incremental search (ES-ell)        
+     2         146         24348.2         3.84737               1      Successful search (ES-ell)        
+     2         150         24347.7         3.70114               1      Incremental search (ES-ell)        
+     2         151         24343.2         3.87539               1      Successful search (ES-ell)        
+     2         189         24326.7         19.4134               1        Successful poll           Train
+     3         190           24222         20.9449               1      Successful search (ES-wcm)        
+     3         194         24189.1         19.7094               1      Successful search (ES-wcm)        
+     3         196         24179.7         20.6426               1      Successful search (ES-wcm)        
+     3         197         24131.5         20.8578               1      Successful search (ES-wcm)        
+     3         206         24124.1         17.1486               1      Successful search (ES-wcm)        
+     3         207         24108.3         20.4987               1      Successful search (ES-wcm)        
+     3         208         24078.4         21.1663               1      Successful search (ES-wcm)        
+     3         210         24051.4         21.1621               1      Successful search (ES-wcm)        
+     3         215         24014.1         20.1494               1      Successful search (ES-wcm)        
+     3         219         24008.2         16.6744               1      Successful search (ES-wcm)        
+     3         223         23985.6         14.0968               1      Successful search (ES-wcm)        
+     3         248         23984.7         7.06971               1      Incremental search (ES-wcm)        
+     3         249         23978.1         8.97735               1      Successful search (ES-wcm)        
+     3         253         23974.3         15.2015               1      Successful search (ES-ell)        
+     3         258         23970.3         8.26703               1      Successful search (ES-ell)        
+     3         259         23964.4         12.3479               1      Successful search (ES-ell)        
+     3         261         23957.3         10.4963               1      Successful search (ES-ell)        
+     3         270         23928.5         14.7501               1      Successful search (ES-ell)        
+     3         283         23928.1         18.3477               1      Incremental search (ES-ell)        
+     3         286         23877.2         17.6644               1      Successful search (ES-ell)        
+     3         329         23777.9         16.0614               1        Successful poll           
+     4         363         23771.5         15.9653             0.5          Refine grid             
+     5         364         23770.9         23.3157             0.5      Successful search (ES-wcm)        
+     5         368         23757.6         23.1353             0.5      Successful search (ES-wcm)        
+     5         370         23685.8         22.7489             0.5      Successful search (ES-wcm)        
+     5         373         23680.3         22.5171             0.5      Successful search (ES-wcm)        
+     5         378           23679         15.7864             0.5      Successful search (ES-ell)        
+     5         385         23628.2         18.4481             0.5      Successful search (ES-wcm)        
+     5         391         23615.8         10.6367             0.5      Successful search (ES-wcm)        
+     5         392         23608.3         14.1205             0.5      Successful search (ES-wcm)        
+     5         417         23544.3         20.8416               1        Successful poll           Train
+     6         432         23592.6         11.9127               1      Successful search (ES-wcm)        
+     6         435         23581.1         27.3225               1      Successful search (ES-wcm)        
+     6         436         23580.8         27.5791               1      Incremental search (ES-wcm)        
+     6         440         23572.2         27.5895               1      Successful search (ES-wcm)        
+     6         445         23545.3         23.7673               1      Successful search (ES-wcm)        
+     6         483         23539.8           19.85               1        Successful poll           
+     7         484         23507.1          27.909               1      Successful search (ES-wcm)        
+     7         491         23476.2          23.389               1      Successful search (ES-wcm)        
+     7         500         23447.7         19.7842               1      Successful search (ES-wcm)        
+     7         522         23441.1         16.7929               1      Successful search (ES-wcm)        
+     7         523         23381.1         19.3584               1      Successful search (ES-wcm)        
+     7         531         23375.4         18.9212               1      Successful search (ES-wcm)        
+     7         578         23375.4         18.9212             0.5          Refine grid             Train
+     8         619         23391.8         5.20219               1        Successful poll           Train
+     9         626         23385.1         8.80824               1      Successful search (ES-ell)        
+     9         645         23384.4         8.84699               1      Incremental search (ES-wcm)        
+     9         670         23384.4         8.84699             0.5          Refine grid             
+    10         673         23394.4         20.1429             0.5      Incremental search (ES-wcm)        
+    10         675         23342.9         19.5463             0.5      Successful search (ES-wcm)        
+    10         677         23335.7         19.6195             0.5      Successful search (ES-wcm)        
+    10         678         23334.6         20.0362             0.5      Successful search (ES-wcm)        
+    10         680         23328.9         19.7758             0.5      Successful search (ES-wcm)        
+    10         690         23320.7         25.9272             0.5      Successful search (ES-wcm)        
+    10         705           23312         24.5362             0.5      Successful search (ES-wcm)        
+    10         720         23308.7         20.0035             0.5      Successful search (ES-wcm)        
+    10         727         23307.4         10.1351             0.5      Successful search (ES-ell)        
+    10         728         23299.3         10.6558             0.5      Successful search (ES-ell)        
+    10         729           23288         12.3496             0.5      Successful search (ES-ell)        
+    10         737         23287.8         9.28602             0.5      Incremental search (ES-ell)        
+    10         739         23274.9         13.3931             0.5      Successful search (ES-ell)        
+    10         740         23251.7           17.64             0.5      Successful search (ES-ell)        
+    10         746         23246.2         27.8057             0.5      Successful search (ES-wcm)        
+    10         751           23218         22.7294             0.5      Successful search (ES-ell)        
+    10         753         23188.9         22.1498             0.5      Successful search (ES-ell)        
+    10         754         23127.6         23.9697             0.5      Successful search (ES-ell)        
+    10         759         23109.8         15.7033             0.5      Successful search (ES-ell)        
+    10         760           23102         23.5303             0.5      Successful search (ES-wcm)        
+    10         771         23100.4         9.71868             0.5      Successful search (ES-wcm)        
+    10         772         23095.7         10.5188             0.5      Successful search (ES-wcm)        
+    10         779         23084.6         19.2927             0.5      Successful search (ES-wcm)        
+    10         790         23081.9         8.89116             0.5      Successful search (ES-ell)        
+    10         831         23081.9         8.89116            0.25          Refine grid             
+    11         836         23079.9         8.98107            0.25      Successful search (ES-wcm)        
+    11         889         23079.9         8.98107           0.125          Refine grid             
+    12         890         23071.8         10.5907           0.125      Successful search (ES-wcm)        
+    12         892         23070.9           19.46           0.125      Successful search (ES-wcm)        
+    12         895         23067.1         12.9586           0.125      Successful search (ES-wcm)        
+    12         896         23065.7         17.3834           0.125      Successful search (ES-wcm)        
+    12         947         23033.5          10.239            0.25        Successful poll           
+    13         988         23030.8         8.50874             0.5        Successful poll           
+    14        1029         23028.9          12.905               1        Successful poll           
+    15        1040         23013.1         12.6811               1      Successful search (ES-wcm)        
+    15        1077         23013.1         12.6811             0.5          Refine grid             Train
+    16        1083         22982.5         11.5506             0.5      Successful search (ES-wcm)        
+    16        1088         22974.2         9.61469             0.5      Successful search (ES-wcm)        
+    16        1090         22969.5         10.0115             0.5      Successful search (ES-wcm)        
+    16        1091         22968.5         9.82111             0.5      Successful search (ES-wcm)        
+    16        1131         22968.5         9.82111            0.25          Refine grid             Train
+    17        1138         22976.4          6.4088            0.25      Successful search (ES-wcm)        
+    17        1139         22974.9         8.87833            0.25      Successful search (ES-ell)        
+    17        1188         22949.1         13.1664             0.5        Successful poll           
+    18        1196         22938.1         10.1277             0.5      Successful search (ES-ell)        
+    18        1197         22920.5         11.0525             0.5      Successful search (ES-ell)        
+    18        1242         22920.5         11.0525            0.25          Refine grid             
+    19        1246         22928.9         9.23256            0.25      Successful search (ES-ell)        
+    19        1247         22902.6         9.04691            0.25      Successful search (ES-ell)        
+    19        1300         22902.6         9.04691           0.125          Refine grid             Train
+    20        1304         22908.2         7.29327           0.125      Successful search (ES-ell)        
+    20        1307         22908.1         7.37414           0.125      Incremental search (ES-ell)        
+    20        1359         22908.1         7.37414          0.0625          Refine grid             Train
+    21        1360         22905.1         10.7134          0.0625      Successful search (ES-wcm)        
+    21        1363         22896.6         10.8275          0.0625      Successful search (ES-wcm)        
+    21        1419         22881.2         7.95962           0.125        Successful poll           
+    22        1463         22881.7         7.91257          0.0625          Refine grid             Train
+    23        1464         22898.1         8.35822          0.0625      Successful search (ES-ell)        
+    23        1465         22895.1          13.643          0.0625      Successful search (ES-wcm)        
+    23        1523         22895.1          13.643         0.03125          Refine grid             Train
+    24        1524         22890.6         8.53236         0.03125      Successful search (ES-wcm)        
+    24        1525         22890.2         8.77509         0.03125      Successful search (ES-ell)        
+    24        1583         22888.1         12.5211          0.0625        Successful poll           
+    25        1584         22877.5          10.928          0.0625      Successful search (ES-ell)        
+    25        1643         22877.5          10.928         0.03125          Refine grid             
+    26        1644         22873.6         7.05643         0.03125      Successful search (ES-ell)        
+    26        1645         22861.9         7.06548         0.03125      Successful search (ES-ell)        
+    26        1703         22861.9         7.06548        0.015625          Refine grid             
+    27        1704         22865.8         6.71102        0.015625      Successful search (ES-wcm)        
+    27        1738         22860.7         13.5859         0.03125        Successful poll           Train
+    28        1739         22839.7         4.07351         0.03125      Successful search (ES-ell)        
+    28        1798         22839.7         4.07351        0.015625          Refine grid             
+    29        1799         22869.3         4.68074        0.015625      Successful search (ES-wcm)        
+    29        1802         22866.3         4.63493        0.015625      Successful search (ES-wcm)        
+    29        1814         22863.9         8.77598        0.015625      Successful search (ES-wcm)        
+    29        1815         22858.6         8.38946        0.015625      Successful search (ES-wcm)        
+    29        1818         22853.8         6.37097        0.015625      Successful search (ES-wcm)        
+    29        1820         22847.6         5.98806        0.015625      Successful search (ES-ell)        
+    29        1821         22847.2         6.13172        0.015625      Successful search (ES-ell)        
+    29        1873         22847.2         6.13172       0.0078125          Refine grid             
+    30        1874         22866.5          2.1432       0.0078125      Successful search (ES-ell)        
+    30        1875         22863.6         3.11064       0.0078125      Successful search (ES-ell)        
+    30        1876         22862.5         4.43862       0.0078125      Successful search (ES-ell)        
+    30        1933         22862.5         4.43862      0.00390625          Refine grid             
+    31        1934         22865.7         1.80864      0.00390625      Successful search (ES-ell)        
+    31        1935         22861.2         2.15959      0.00390625      Successful search (ES-ell)        
+    31        1936         22850.6         3.72208      0.00390625      Successful search (ES-wcm)        
+    31        1937           22845         4.07295      0.00390625      Successful search (ES-ell)        
+    31        1993           22845         4.07295      0.00195312          Refine grid             Train
+    32        1994         22870.5         2.17262      0.00195312      Successful search (ES-ell)        
+    32        1995         22869.2         2.22522      0.00195312      Successful search (ES-ell)        
+    32        1996         22867.2         2.50827      0.00195312      Successful search (ES-ell)        
+    32        1997         22864.8         3.10534      0.00195312      Successful search (ES-ell)        
+    32        1999         22864.3         3.48627      0.00195312      Successful search (ES-ell)        
+    32        2000         22863.1         4.28906      0.00195312      Successful search (ES-ell)        
+    32        2001         22861.9         5.99162      0.00195312      Successful search (ES-ell)        
+    32        2053         22861.9         5.99162     0.000976562          Refine grid             Train
+Optimization terminated: change in the function value less than options['tol_mesh']
+Estimated function value at minimum: 22871.294226612914 ± 1.1541057884984365 (mean ± SEM from 100 samples)
+BADS minimum at: x_min = [ 2.58020e+00  3.99520e+00  3.72600e+00  8.57300e+00  6.65470e+00
+  2.15230e+00  3.08140e+00  4.18000e-02  6.86490e+00  4.70747e+01
+  7.60900e-01  3.27700e-01  1.82500e-01  1.84000e-01 -1.21560e+00], training NLL = 22871.2942
+total f-count: 2153, time: 80.96 min
+
+ ------- Finish Optimization for Subject 5 ---------- 
+
+ ------- Start Optimization for Subject 6 ---------- 
+
+ Cross Validation fold 0/1
+
+ -- Start Optimization: method BADS --
+
+ Optimization Run 1/2
+Initial params: [1.1469, 7.2991, 2.3667, 5.3389, -0.4261, 43.4173, 4.6746, 0.5875, 17.2323, 29.0621, 0.5176, 0.1872, 0.1684, 0.1793, 1.1552]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         25329.2             nan               1                                  
+     0          33         24740.5             nan               1          Initial mesh            Initial points
+     0          59         24664.7        0.963659               1        Successful poll           Train
+     1          70         24651.2        0.448704               1      Successful search (ES-wcm)        
+     1          81         24639.2        0.450207               1      Successful search (ES-wcm)        
+     1         103         24627.5        0.520945               1      Successful search (ES-wcm)        
+     1         127         24609.6        0.521527               1        Successful poll           Train
+     2         129         24586.3        0.744999               1      Successful search (ES-wcm)        
+     2         131         24546.3           0.745               1      Successful search (ES-wcm)        
+     2         132         24537.7        0.744975               1      Successful search (ES-ell)        
+     2         137           24506        0.744975               1      Successful search (ES-wcm)        
+     2         142         24486.3        0.744947               1      Successful search (ES-wcm)        
+     2         146         24483.4        0.744902               1      Successful search (ES-wcm)        
+     2         154         24477.2        0.744675               1      Successful search (ES-wcm)        
+     2         155         24441.6        0.744509               1      Successful search (ES-wcm)        
+     2         172         24440.5        0.717497               1      Successful search (ES-wcm)        
+     2         186         24438.9        0.588972               1      Successful search (ES-ell)        
+     2         223         24422.8         9.35571               1        Successful poll           
+     3         224         24408.3         12.0516               1      Successful search (ES-ell)        
+     3         226         24341.4         13.0225               1      Successful search (ES-wcm)        
+     3         227           24258         13.0252               1      Successful search (ES-wcm)        
+     3         231         24246.6         12.7651               1      Successful search (ES-wcm)        
+     3         234         24203.9         12.6502               1      Successful search (ES-wcm)        
+     3         237           24191         10.9845               1      Successful search (ES-ell)        
+     3         238         24165.3         12.3955               1      Successful search (ES-wcm)        
+     3         239         24134.4         12.5166               1      Successful search (ES-wcm)        
+     3         241         24083.2         12.3929               1      Successful search (ES-ell)        
+     3         245         24030.3         11.4099               1      Successful search (ES-ell)        
+     3         246         24018.6         11.9893               1      Successful search (ES-ell)        
+     3         250         23999.5         11.3021               1      Successful search (ES-wcm)        
+     3         260         23993.3         10.2533               1      Successful search (ES-wcm)        
+     3         261         23980.8         10.6138               1      Successful search (ES-wcm)        
+     3         268         23978.9          7.6599               1      Successful search (ES-wcm)        
+     3         270         23798.8         18.0501               1      Successful search (ES-wcm)        
+     3         273         23780.2         16.8774               1      Successful search (ES-wcm)        
+     3         274         23715.3         17.9107               1      Successful search (ES-wcm)        
+     3         275         23661.5         17.1737               1      Successful search (ES-wcm)        
+     3         278         23594.6         17.2231               1      Successful search (ES-ell)        
+     3         288         23525.5         14.5976               1      Successful search (ES-wcm)        
+     3         289         23453.3         17.9148               1      Successful search (ES-wcm)        
+     3         290         23387.8         18.4938               1      Successful search (ES-wcm)        
+     3         291         23234.6         18.0669               1      Successful search (ES-wcm)        
+     3         292         23208.1         19.0296               1      Successful search (ES-wcm)        
+     3         294         23064.2         18.9823               1      Successful search (ES-wcm)        
+     3         320         23003.9         16.4654               1        Successful poll           
+     4         323         22973.1          14.393               1      Successful search (ES-ell)        
+     4         324         22938.7         17.0426               1      Successful search (ES-wcm)        
+     4         326         22918.4         15.1949               1      Successful search (ES-wcm)        
+     4         335         22907.1         13.3449               1      Successful search (ES-wcm)        
+     4         336         22876.4         14.4414               1      Successful search (ES-wcm)        
+     4         337         22765.9         17.4649               1      Successful search (ES-wcm)        
+     4         348         22751.7         15.2318               1      Successful search (ES-wcm)        
+     4         356         22746.6         15.2185               1      Successful search (ES-wcm)        
+     4         403         22726.6         17.0044               1        Successful poll           
+     5         417         22716.7          13.198               1      Successful search (ES-ell)        
+     5         418         22716.5         12.4562               1      Incremental search (ES-ell)        
+     5         419         22529.2         32.8408               1      Successful search (ES-ell)        
+     5         471         22529.2         32.8408             0.5          Refine grid             
+     6         473         22528.1         22.7701             0.5      Successful search (ES-wcm)        
+     6         476         22488.9         21.6024             0.5      Successful search (ES-ell)        
+     6         483         22487.7         11.2541             0.5      Successful search (ES-ell)        
+     6         486         22485.6          9.9425             0.5      Successful search (ES-ell)        
+     6         493         22381.9         12.5697             0.5      Successful search (ES-wcm)        
+     6         495         22373.7         12.7457             0.5      Successful search (ES-wcm)        
+     6         499         22356.1         10.9264             0.5      Successful search (ES-wcm)        
+     6         543         22356.1         10.9264            0.25          Refine grid             
+     7         545         22337.6         9.20565            0.25      Successful search (ES-wcm)        
+     7         569         22322.8         7.98373            0.25      Successful search (ES-wcm)        
+     7         570         22320.3         11.9186            0.25      Successful search (ES-wcm)        
+     7         571         22318.8         10.6264            0.25      Successful search (ES-wcm)        
+     7         583         22314.6         9.30496            0.25      Successful search (ES-wcm)        
+     7         584         22311.2         8.76866            0.25      Successful search (ES-wcm)        
+     7         598         22300.4          10.978            0.25      Successful search (ES-wcm)        
+     7         617         22298.6         6.15893            0.25      Successful search (ES-wcm)        
+     7         625         22296.4         8.92811            0.25      Successful search (ES-wcm)        
+     7         629         22292.8         7.27263            0.25      Successful search (ES-wcm)        
+     7         643         22290.1         5.29496            0.25      Successful search (ES-wcm)        
+     7         691         22290.1         5.29496           0.125          Refine grid             
+     8         700         22298.7         3.77662           0.125      Successful search (ES-ell)        
+     8         702         22298.6         3.80354           0.125      Successful search (ES-ell)        
+     8         703         22295.9          4.0695           0.125      Successful search (ES-ell)        
+     8         705         22290.3          5.6391           0.125      Successful search (ES-wcm)        
+     8         709         22288.3         9.43605           0.125      Successful search (ES-ell)        
+     8         719         22288.2         4.52873           0.125      Successful search (ES-ell)        
+     8         720         22287.3         4.36608           0.125      Successful search (ES-ell)        
+     8         721         22284.7         4.65574           0.125      Successful search (ES-ell)        
+     8         764         22284.7         4.65574          0.0625          Refine grid             
+     9         768         22292.4         3.82398          0.0625      Successful search (ES-ell)        
+     9         779         22291.8         2.74043          0.0625      Successful search (ES-ell)        
+     9         783         22291.6         4.23302          0.0625      Successful search (ES-ell)        
+     9         784         22291.1         5.22488          0.0625      Successful search (ES-ell)        
+     9         800         22287.8         7.03708          0.0625      Successful search (ES-wcm)        
+     9         803         22286.9         5.77521          0.0625      Successful search (ES-ell)        
+     9         804         22283.4         5.69157          0.0625      Successful search (ES-ell)        
+     9         852         22283.4         5.69157         0.03125          Refine grid             
+    10         853           22285         9.98805         0.03125      Successful search (ES-wcm)        
+    10         856         22277.8         7.85152         0.03125      Successful search (ES-wcm)        
+    10         857         22272.8         10.8572         0.03125      Successful search (ES-wcm)        
+    10         910         22272.8         10.8572        0.015625          Refine grid             
+    11         911           22291         4.78145        0.015625      Successful search (ES-wcm)        
+    11         913         22290.9         6.22456        0.015625      Successful search (ES-wcm)        
+    11         914         22282.7         8.96519        0.015625      Successful search (ES-wcm)        
+    11         968         22282.7         8.96519       0.0078125          Refine grid             Train
+    12         969         22289.5         3.85338       0.0078125      Successful search (ES-wcm)        
+    12         970           22285         5.92477       0.0078125      Successful search (ES-wcm)        
+    12         972         22283.7         6.07887       0.0078125      Successful search (ES-wcm)        
+    12         973         22283.6         6.27369       0.0078125      Successful search (ES-ell)        
+    12         974         22277.2         6.65984       0.0078125      Successful search (ES-ell)        
+    12         975         22275.7         7.70767       0.0078125      Successful search (ES-ell)        
+    12        1026         22275.7         7.70767      0.00390625          Refine grid             
+    13        1027         22291.9         2.32544      0.00390625      Successful search (ES-ell)        
+    13        1028         22290.8         2.44203      0.00390625      Successful search (ES-ell)        
+    13        1029         22289.8         2.62523      0.00390625      Successful search (ES-ell)        
+    13        1030         22286.3         3.82766      0.00390625      Successful search (ES-wcm)        
+    13        1031         22279.5         4.10294      0.00390625      Successful search (ES-wcm)        
+    13        1032         22271.6         5.02965      0.00390625      Successful search (ES-ell)        
+    13        1034         22270.2         6.10077      0.00390625      Successful search (ES-ell)        
+    13        1063         22260.1         6.42074       0.0078125        Successful poll           Train
+    14        1064         22286.5         2.12549       0.0078125      Successful search (ES-ell)        
+    14        1065         22281.2         2.66479       0.0078125      Successful search (ES-ell)        
+    14        1066         22280.7         3.62833       0.0078125      Successful search (ES-ell)        
+    14        1121         22280.7         3.62833      0.00390625          Refine grid             
+    15        1122         22292.3         2.33041      0.00390625      Successful search (ES-ell)        
+    15        1123         22291.4         2.41824      0.00390625      Successful search (ES-ell)        
+    15        1124         22288.6         2.58114      0.00390625      Successful search (ES-ell)        
+    15        1125           22287         2.99625      0.00390625      Successful search (ES-ell)        
+    15        1127         22284.6         4.49458      0.00390625      Successful search (ES-wcm)        
+    15        1129         22283.2         5.31575      0.00390625      Successful search (ES-wcm)        
+    15        1130         22278.9         5.68547      0.00390625      Successful search (ES-wcm)        
+    15        1132         22271.6         2.68274      0.00390625      Successful search (ES-wcm)        
+    15        1134         22270.2         4.59173      0.00390625      Successful search (ES-wcm)        
+    15        1179         22270.2         4.59173      0.00195312          Refine grid             
+    16        1180         22275.1          1.9224      0.00195312      Successful search (ES-wcm)        
+    16        1181         22273.2         2.00534      0.00195312      Successful search (ES-wcm)        
+    16        1182         22271.3         2.38931      0.00195312      Successful search (ES-wcm)        
+    16        1185         22268.7         2.32812      0.00195312      Successful search (ES-ell)        
+    16        1237         22268.7         2.32812     0.000976562          Refine grid             Train
+Optimization terminated: change in the function value less than options['tol_mesh']
+Estimated function value at minimum: 22272.51784837803 ± 1.2025534217040161 (mean ± SEM from 100 samples)
+BADS minimum at: x_min = [ 1.125   1.1251  3.7589  6.1995  3.9296  0.9859  2.6505  0.5113 17.1695
+ 15.123   0.6721  0.6585  0.2686  0.2309 -0.0931], training NLL = 22272.5178
+total f-count: 1337, time: 49.97 min
+
+ Optimization Run 2/2
+Initial params: [0.7327, 8.1883, 4.6033, 9.0758, -4.1657, 37.9815, 0.9126, 0.1749, 23.9636, 27.6871, 0.6194, 0.6519, 0.1625, 0.1221, 0.7875]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         25329.2             nan               1                                  
+     0          33         24739.8             nan               1          Initial mesh            Initial points
+     0          59         24659.2         0.99762               1        Successful poll           Train
+     1          66         24655.4        0.631036               1      Successful search (ES-wcm)        
+     1          70         24654.5        0.630462               1      Incremental search (ES-wcm)        
+     1          73         24649.8        0.611763               1      Successful search (ES-ell)        
+     1          74         24649.3        0.607565               1      Incremental search (ES-ell)        
+     1          86         24647.4        0.478836               1      Successful search (ES-ell)        
+     1          87         24639.4        0.474492               1      Successful search (ES-ell)        
+     1          88           24635        0.486712               1      Successful search (ES-ell)        
+     1         122           24532        0.703464               1        Successful poll           
+     2         125         24481.9        0.703634               1      Successful search (ES-wcm)        
+     2         134         24479.8         4.99754               1      Successful search (ES-wcm)        
+     2         139         24444.6         5.09157               1      Successful search (ES-wcm)        
+     2         144         24433.3         5.03846               1      Successful search (ES-wcm)        
+     2         163         24418.7          4.9445               1      Successful search (ES-wcm)        
+     2         189         24336.5         5.39821               1        Successful poll           Train
+     3         228         24336.5         5.45978             0.5          Refine grid             Train
+     4         233           24351         5.32926             0.5      Successful search (ES-wcm)        
+     4         234         24344.3         5.25065             0.5      Successful search (ES-wcm)        
+     4         236         24329.6         4.82379             0.5      Successful search (ES-wcm)        
+     4         286         24329.6         4.82379            0.25          Refine grid             Train
+     5         292         24324.2         4.37809            0.25      Successful search (ES-wcm)        
+     5         307         24319.7         3.68034            0.25      Successful search (ES-wcm)        
+     5         309         24319.2          3.2023            0.25      Successful search (ES-wcm)        
+     5         311         24319.2         3.66199            0.25      Incremental search (ES-wcm)        
+     5         313         24315.1         4.62782            0.25      Successful search (ES-wcm)        
+     5         358         24101.5         4.87398             0.5        Successful poll           Train
+     6         359         24025.1         4.86313             0.5      Successful search (ES-wcm)        
+     6         360         23947.7         4.86794             0.5      Successful search (ES-wcm)        
+     6         361         23834.8         4.86962             0.5      Successful search (ES-wcm)        
+     6         367         23803.6         4.77254             0.5      Successful search (ES-ell)        
+     6         373         23802.5         4.03911             0.5      Successful search (ES-ell)        
+     6         375         23799.7         4.76403             0.5      Successful search (ES-ell)        
+     6         382           23775         3.70218             0.5      Successful search (ES-ell)        
+     6         383         23772.8         4.24783             0.5      Successful search (ES-ell)        
+     6         431         23749.3         7.91079               1        Successful poll           Train
+     7         436         23748.7         7.81484               1      Incremental search (ES-ell)        
+     7         441         23742.7         7.44511               1      Successful search (ES-ell)        
+     7         485         23714.8         6.54784               1        Successful poll           
+     8         486           23717         8.00474               1      Successful search (ES-ell)        
+     8         487           23614         8.02913               1      Successful search (ES-ell)        
+     8         488         23514.8         8.00475               1      Successful search (ES-ell)        
+     8         491         23429.6          12.316               1      Successful search (ES-ell)        
+     8         494         23371.5         12.2322               1      Successful search (ES-ell)        
+     8         496         23326.2         12.1803               1      Successful search (ES-ell)        
+     8         500           23300         11.9847               1      Successful search (ES-ell)        
+     8         504         23264.2         11.9236               1      Successful search (ES-ell)        
+     8         505         23249.3         11.9051               1      Successful search (ES-ell)        
+     8         508         23240.3         11.6524               1      Successful search (ES-ell)        
+     8         553         23191.6           18.26               1        Successful poll           Train
+     9         558         23179.1         17.7739               1      Successful search (ES-ell)        
+     9         559         23148.3         18.1843               1      Successful search (ES-wcm)        
+     9         605         23148.3         18.1843             0.5          Refine grid             
+    10         611         23156.5         12.2226             0.5      Successful search (ES-wcm)        
+    10         614         23150.2         10.5632             0.5      Successful search (ES-ell)        
+    10         615         23122.1         11.1283             0.5      Successful search (ES-ell)        
+    10         616         23112.5         12.1704             0.5      Successful search (ES-wcm)        
+    10         617           23109         12.3049             0.5      Successful search (ES-wcm)        
+    10         622         23084.6         12.2765             0.5      Successful search (ES-ell)        
+    10         627         23012.2         12.2546             0.5      Successful search (ES-wcm)        
+    10         633         22973.6         11.3795             0.5      Successful search (ES-wcm)        
+    10         676         22964.4         12.0063               1        Successful poll           
+    11         677         22921.5         12.3694               1      Successful search (ES-wcm)        
+    11         688         22910.1         12.7884               1      Successful search (ES-ell)        
+    11         698         22905.3         13.2699               1      Successful search (ES-ell)        
+    11         700         22902.1         13.8482               1      Successful search (ES-ell)        
+    11         744         22902.1         13.8482             0.5          Refine grid             
+    12         747           22899         12.5433             0.5      Successful search (ES-ell)        
+    12         761         22893.8         14.6894             0.5      Successful search (ES-ell)        
+    12         769         22890.8         9.42328             0.5      Successful search (ES-ell)        
+    12         770         22881.7         10.5046             0.5      Successful search (ES-ell)        
+    12         771         22860.1         12.3605             0.5      Successful search (ES-ell)        
+    12         772         22859.6         13.1662             0.5      Successful search (ES-ell)        
+    12         778           22858         13.6693             0.5      Successful search (ES-ell)        
+    12         781         22853.1         12.6457             0.5      Successful search (ES-ell)        
+    12         784         22846.2         10.6268             0.5      Successful search (ES-ell)        
+    12         787         22843.2         10.3059             0.5      Successful search (ES-ell)        
+    12         789         22840.9         9.20908             0.5      Successful search (ES-ell)        
+    12         796         22839.7         6.95427             0.5      Successful search (ES-ell)        
+    12         803         22833.1         8.45553             0.5      Successful search (ES-wcm)        
+    12         838         22830.4         10.7585               1        Successful poll           Train
+    13         842         22816.8         13.5174               1      Successful search (ES-ell)        
+    13         848         22816.8          11.071               1      Incremental search (ES-ell)        
+    13         853         22803.4         8.29062               1      Successful search (ES-ell)        
+    13         861         22794.7          10.132               1      Successful search (ES-ell)        
+    13         864         22786.7         8.70432               1      Successful search (ES-ell)        
+    13         867         22786.4         7.72911               1      Incremental search (ES-ell)        
+    13         882         22785.4         4.56671               1      Successful search (ES-ell)        
+    13         894         22784.2         4.42035               1      Successful search (ES-ell)        
+    13         896         22782.7         5.01858               1      Successful search (ES-ell)        
+    13         897         22782.5          6.7014               1      Incremental search (ES-ell)        
+    13         936         22782.5          6.7014             0.5          Refine grid             Train
+    14         940         22767.1         7.88522             0.5      Successful search (ES-ell)        
+    14         941         22761.5         8.22747             0.5      Successful search (ES-ell)        
+    14         992         22761.5         8.22747            0.25          Refine grid             Train
+    15         997           22783         4.08441            0.25      Successful search (ES-ell)        
+    15         999         22777.3         6.01623            0.25      Successful search (ES-ell)        
+    15        1000         22770.5         6.92928            0.25      Successful search (ES-ell)        
+    15        1001         22769.3         9.45941            0.25      Successful search (ES-ell)        
+    15        1005         22766.2         6.75719            0.25      Successful search (ES-ell)        
+    15        1006         22760.5         8.93445            0.25      Successful search (ES-ell)        
+    15        1049         22760.5         8.93445           0.125          Refine grid             
+    16        1052         22771.8         11.3235           0.125      Successful search (ES-wcm)        
+    16        1055         22764.3         9.67325           0.125      Successful search (ES-wcm)        
+    16        1066         22752.6         9.12307           0.125      Successful search (ES-ell)        
+    16        1122         22752.6         9.12307          0.0625          Refine grid             
+    17        1124         22762.4         4.94476          0.0625      Successful search (ES-ell)        
+    17        1129         22760.8         4.29213          0.0625      Successful search (ES-wcm)        
+    17        1130         22760.2         6.21603          0.0625      Successful search (ES-wcm)        
+    17        1131         22755.8          7.2391          0.0625      Successful search (ES-wcm)        
+    17        1133         22754.5         5.25477          0.0625      Successful search (ES-wcm)        
+    17        1134         22753.4          5.1938          0.0625      Successful search (ES-wcm)        
+    17        1140           22752         4.60517          0.0625      Successful search (ES-wcm)        
+    17        1143           22751         3.43792          0.0625      Successful search (ES-ell)        
+    17        1144         22750.5         4.06808          0.0625      Successful search (ES-wcm)        
+    17        1146         22749.6         3.83955          0.0625      Successful search (ES-wcm)        
+    17        1195         22749.6         3.83955         0.03125          Refine grid             
+    18        1197         22760.1         2.97201         0.03125      Successful search (ES-wcm)        
+    18        1198           22758         3.74074         0.03125      Successful search (ES-wcm)        
+    18        1202         22757.9         3.24101         0.03125      Successful search (ES-ell)        
+    18        1203         22756.7         3.53126         0.03125      Successful search (ES-ell)        
+    18        1253         22756.7         3.53126        0.015625          Refine grid             
+    19        1254         22762.3         2.47132        0.015625      Successful search (ES-ell)        
+    19        1255           22761         3.00129        0.015625      Successful search (ES-ell)        
+    19        1272         22760.7         2.41589        0.015625      Successful search (ES-wcm)        
+    19        1273         22759.3         2.81237        0.015625      Successful search (ES-wcm)        
+    19        1284         22756.4         1.92764        0.015625      Successful search (ES-ell)        
+    19        1285         22736.4         3.74214        0.015625      Successful search (ES-ell)        
+    19        1339         22726.2         6.70375         0.03125        Successful poll           
+    20        1340         22744.8         5.04345         0.03125      Successful search (ES-ell)        
+    20        1341           22725          5.5715         0.03125      Successful search (ES-ell)        
+    20        1343         22720.9         5.10426         0.03125      Successful search (ES-ell)        
+    20        1344         22712.7         6.22691         0.03125      Successful search (ES-ell)        
+    20        1348         22708.5         4.80417         0.03125      Successful search (ES-ell)        
+    20        1397         22679.6         10.4571          0.0625        Successful poll           
+    21        1398         22575.2         10.5534          0.0625      Successful search (ES-wcm)        
+    21        1402         22558.9         10.4439          0.0625      Successful search (ES-wcm)        
+    21        1405         22547.6         10.1107          0.0625      Successful search (ES-wcm)        
+    21        1406         22537.5         9.83651          0.0625      Successful search (ES-wcm)        
+    21        1416         22537.2         7.49931          0.0625      Successful search (ES-wcm)        
+    21        1430         22530.9         7.78747          0.0625      Successful search (ES-wcm)        
+    21        1434         22519.3         9.56882          0.0625      Successful search (ES-wcm)        
+    21        1485         22440.1         12.0506           0.125        Successful poll           
+    22        1492         22426.9         11.9353           0.125      Successful search (ES-wcm)        
+    22        1499         22426.7         7.61823           0.125      Successful search (ES-wcm)        
+    22        1543         22426.7         7.61823          0.0625          Refine grid             
+    23        1546         22438.4         13.3637          0.0625      Successful search (ES-wcm)        
+    23        1585         22437.9         9.27412           0.125        Successful poll           Train
+    24        1587         22426.2         9.68489           0.125      Successful search (ES-ell)        
+    24        1602         22422.3         8.16949           0.125      Successful search (ES-ell)        
+    24        1603         22411.2         11.2405           0.125      Successful search (ES-ell)        
+    24        1658         22411.2         11.2405          0.0625          Refine grid             
+    25        1660         22419.7         3.16331          0.0625      Successful search (ES-ell)        
+    25        1662         22417.4         7.23358          0.0625      Successful search (ES-ell)        
+    25        1663         22416.4          8.7357          0.0625      Successful search (ES-ell)        
+    25        1716         22416.4          8.7357         0.03125          Refine grid             
+    26        1717         22424.6          2.6671         0.03125      Successful search (ES-ell)        
+    26        1718         22418.5         3.97517         0.03125      Successful search (ES-ell)        
+    26        1719         22407.9         5.71358         0.03125      Successful search (ES-ell)        
+    26        1774         22407.9         5.71358        0.015625          Refine grid             
+    27        1775         22429.2         2.20086        0.015625      Successful search (ES-ell)        
+    27        1776         22425.8         2.50815        0.015625      Successful search (ES-ell)        
+    27        1777         22420.4         3.31299        0.015625      Successful search (ES-ell)        
+    27        1778         22413.9         5.13179        0.015625      Successful search (ES-ell)        
+    27        1813         22409.7         4.25067         0.03125        Successful poll           Train
+    28        1856         22406.6          5.3253        0.015625          Refine grid             Train
+    29        1857         22422.4         4.57121        0.015625      Successful search (ES-wcm)        
+    29        1858         22415.4         5.95776        0.015625      Successful search (ES-wcm)        
+    29        1860         22412.2         5.86161        0.015625      Successful search (ES-wcm)        
+    29        1862         22402.6         5.89908        0.015625      Successful search (ES-wcm)        
+    29        1914         22402.6         5.89908       0.0078125          Refine grid             Train
+    30        1915         22418.5         2.25496       0.0078125      Successful search (ES-wcm)        
+    30        1916           22414         3.20505       0.0078125      Successful search (ES-wcm)        
+    30        1917         22408.7          4.1644       0.0078125      Successful search (ES-wcm)        
+    30        1918         22396.9         4.55424       0.0078125      Successful search (ES-wcm)        
+    30        1919         22394.2         6.07125       0.0078125      Successful search (ES-wcm)        
+    30        1972         22394.2         6.07125      0.00390625          Refine grid             Train
+    31        1973         22408.2         1.90029      0.00390625      Successful search (ES-wcm)        
+    31        1974           22407         2.11317      0.00390625      Successful search (ES-ell)        
+    31        1975         22404.3         2.39745      0.00390625      Successful search (ES-ell)        
+    31        1989         22404.2         2.17944      0.00390625      Successful search (ES-wcm)        
+    31        1990         22402.2         2.54408      0.00390625      Successful search (ES-wcm)        
+    31        1991         22399.8         2.89184      0.00390625      Successful search (ES-wcm)        
+    31        1992         22399.8         3.79905      0.00390625      Successful search (ES-wcm)        
+    31        1993         22399.1         5.59134      0.00390625      Successful search (ES-wcm)        
+    31        2045         22399.1         5.59134      0.00195312          Refine grid             Train
+    32        2046         22401.5         1.88776      0.00195312      Successful search (ES-ell)        
+    32        2047         22399.3         1.99506      0.00195312      Successful search (ES-ell)        
+    32        2048         22396.7          2.3052      0.00195312      Successful search (ES-ell)        
+    32        2049         22392.7         2.78267      0.00195312      Successful search (ES-ell)        
+    32        2050           22389         3.63658      0.00195312      Successful search (ES-ell)        
+    32        2051         22386.8         4.73919      0.00195312      Successful search (ES-ell)        
+    32        2103         22386.8         4.73919     0.000976562          Refine grid             
+Optimization terminated: change in the function value less than options['tol_mesh']
+Estimated function value at minimum: 22401.73730166917 ± 1.3670668871659486 (mean ± SEM from 100 samples)
+BADS minimum at: x_min = [ 4.7873  4.7889  4.8577  6.2509  3.9893  1.2766  2.0661  0.0487 41.154
+ 33.0183  0.4481  0.3789  0.1968  0.182  -0.8299], training NLL = 22401.7373
+total f-count: 2203, time: 82.41 min
+
+ ------- Finish Optimization for Subject 6 ---------- 
+
+ ------- Start Optimization for Subject 11 ---------- 
+
+ Cross Validation fold 0/1
+
+ -- Start Optimization: method BADS --
+
+ Optimization Run 1/2
+Initial params: [1.4626, 8.0232, 14.2132, 17.4441, 3.7988, 18.1199, 3.8342, 0.1618, 20.0806, 23.2894, 0.6513, 0.6843, 0.2114, 0.2585, 1.0992]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 5]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         25766.6             nan               1                                  
+     0          33         24951.6             nan               1          Initial mesh            Initial points
+     0          52         24895.8         1.04981               1        Successful poll           Train
+     1          58           24812         1.04506               1      Successful search (ES-wcm)        
+     1          59         24720.6         1.04375               1      Successful search (ES-wcm)        
+     1          60         24717.9         1.04611               1      Successful search (ES-wcm)        
+     1          62         24645.1         1.04572               1      Successful search (ES-wcm)        
+     1          68         24588.5         0.96792               1      Successful search (ES-wcm)        
+     1          74         24580.8        0.966289               1      Successful search (ES-wcm)        
+     1          79         24515.6        0.963349               1      Successful search (ES-wcm)        
+     1          80         24461.6        0.950012               1      Successful search (ES-ell)        
+     1          81         24407.8        0.942783               1      Successful search (ES-ell)        
+     1          88         24406.7        0.908266               1      Successful search (ES-ell)        
+     1          91         24401.6        0.881652               1      Successful search (ES-ell)        
+     1          96         24397.7        0.877579               1      Successful search (ES-ell)        
+     1         101         24397.1        0.939674               1      Incremental search (ES-ell)        
+     1         109         24379.7        0.765096               1      Successful search (ES-ell)        
+     1         111         24377.3        0.804639               1      Successful search (ES-ell)        
+     1         150         24289.4         9.95519               1        Successful poll           Train
+     2         156           24260         9.21748               1      Successful search (ES-ell)        
+     2         166         24107.8         6.75348               1      Successful search (ES-ell)        
+     2         170           23989         6.72842               1      Successful search (ES-ell)        
+     2         173         23825.8         6.65491               1      Successful search (ES-ell)        
+     2         180         23818.4         5.30706               1      Successful search (ES-ell)        
+     2         182         23781.7         6.71956               1      Successful search (ES-ell)        
+     2         190         23765.2         6.97196               1      Successful search (ES-ell)        
+     2         196           23761         8.24113               1      Successful search (ES-ell)        
+     2         199         23707.8         8.26927               1      Successful search (ES-ell)        
+     2         206         23658.9         6.73191               1      Successful search (ES-ell)        
+     2         210         23638.7         5.71869               1      Successful search (ES-ell)        
+     2         223         23635.2         4.02993               1      Successful search (ES-wcm)        
+     2         224         23615.9         6.35023               1      Successful search (ES-wcm)        
+     2         263         23615.9         6.35023             0.5          Refine grid             Train
+     3         306         23603.5         19.7387               1        Successful poll           Train
+     4         338         23593.1         17.3982               1        Successful poll           Train
+     5         375         23589.9         16.3008             0.5          Refine grid             Train
+     6         378         23579.9         21.3379             0.5      Successful search (ES-wcm)        
+     6         433         23577.5         7.58865               1        Successful poll           Train
+     7         442           23545         14.3519               1      Successful search (ES-wcm)        
+     7         486         23534.6         12.2642               1        Successful poll           
+     8         497         23552.8         9.63573               1      Successful search (ES-wcm)        
+     8         499         23552.4         9.97947               1      Incremental search (ES-wcm)        
+     8         539         23552.4         9.97947             0.5          Refine grid             
+     9         544         23567.6         10.5903             0.5      Successful search (ES-wcm)        
+     9         548         23565.4         13.5427             0.5      Successful search (ES-wcm)        
+     9         551         23556.5          11.937             0.5      Successful search (ES-wcm)        
+     9         561         23554.1         8.73385             0.5      Successful search (ES-wcm)        
+     9         568           23554         6.29509             0.5      Incremental search (ES-wcm)        
+     9         569         23552.1         7.25667             0.5      Successful search (ES-wcm)        
+     9         576           23546         8.76092             0.5      Successful search (ES-wcm)        
+     9         577         23532.6         12.5563             0.5      Successful search (ES-wcm)        
+     9         581         23530.4         8.55952             0.5      Successful search (ES-ell)        
+     9         582           23529         10.6368             0.5      Successful search (ES-ell)        
+     9         627         23525.8         8.51881               1        Successful poll           Train
+    10         632         23527.5         9.41925               1      Incremental search (ES-ell)        
+    10         636         23500.2         9.26928               1      Successful search (ES-ell)        
+    10         640         23491.4         7.77959               1      Successful search (ES-ell)        
+    10         645         23462.9         8.40489               1      Successful search (ES-ell)        
+    10         646           23460         9.74235               1      Successful search (ES-ell)        
+    10         654         23452.3         8.07921               1      Successful search (ES-ell)        
+    10         656         23419.2         7.99578               1      Successful search (ES-ell)        
+    10         657         23410.2         8.50509               1      Successful search (ES-ell)        
+    10         694         23410.2         8.50509             0.5          Refine grid             Train
+    11         706         23431.4         7.75198             0.5      Successful search (ES-wcm)        
+    11         707         23431.1         12.3245             0.5      Successful search (ES-wcm)        
+    11         719         23430.1         8.88386             0.5      Successful search (ES-wcm)        
+    11         767         23430.1         8.88386            0.25          Refine grid             
+    12         768         23411.5         13.6181            0.25      Successful search (ES-wcm)        
+    12         769         23408.3         13.5902            0.25      Successful search (ES-wcm)        
+    12         771         23353.9         13.5006            0.25      Successful search (ES-wcm)        
+    12         777         23312.8           13.52            0.25      Successful search (ES-wcm)        
+    12         779         23275.7         12.4276            0.25      Successful search (ES-ell)        
+    12         794         23250.6         10.4401            0.25      Successful search (ES-wcm)        
+    12         796         23246.7         8.89031            0.25      Successful search (ES-wcm)        
+    12         801         23218.2         11.5347            0.25      Successful search (ES-wcm)        
+    12         818         23217.3         8.60315            0.25      Successful search (ES-wcm)        
+    12         822         23211.1         6.05105            0.25      Successful search (ES-wcm)        
+    12         823         23204.8         6.88817            0.25      Successful search (ES-wcm)        
+    12         827         23204.1         5.40442            0.25      Successful search (ES-ell)        
+    12         844         23201.4         8.47272             0.5        Successful poll           Train
+    13         854         23188.4           7.308             0.5      Successful search (ES-ell)        
+    13         855         23176.2         7.60522             0.5      Successful search (ES-ell)        
+    13         856           23170          8.5001             0.5      Successful search (ES-ell)        
+    13         902         23168.1         10.0357               1        Successful poll           
+    14         939         23170.7         9.76391             0.5          Refine grid             Train
+    15         948         23151.5         6.35623             0.5      Successful search (ES-ell)        
+    15         950         23145.6         6.20616             0.5      Successful search (ES-ell)        
+    15         997         23145.6         6.20616            0.25          Refine grid             Train
+    16        1003         23128.2         7.80743            0.25      Successful search (ES-ell)        
+    16        1006           23124         6.66515            0.25      Successful search (ES-ell)        
+    16        1009         23115.9         6.13089            0.25      Successful search (ES-ell)        
+    16        1018         23115.7          6.2857            0.25      Incremental search (ES-ell)        
+    16        1020         23111.6         7.72919            0.25      Successful search (ES-wcm)        
+    16        1070         23111.6         7.72919           0.125          Refine grid             
+----------------------------------------
+Start job epilogue Fri Jul 17 12:12:26 CEST 2026
+----------------------------------------
+Job ID:          54292409
+Job Exit Code:   0:0
+Username:        wenlou
+Group:           mpla
+Queue:           gpu
+Compute nodes:   dccn-c082
+Asked resources: walltime=1-00:00:00,nodes=1,cpus=8,mem=2G
+Used resources:  cputime=3-06:14:08,walltime=09:46:46,memory=1G
+----------------------------------------
+End job epilogue Fri Jul 17 12:12:26 CEST 2026
+----------------------------------------
