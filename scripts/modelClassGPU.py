@@ -17,9 +17,9 @@ class ModelParams:
     sig_P: float = 30
     sig_P_h: float = 30
     sig_P_l: float = 30
-    sig_rs: float = 0.01
-    sig_rconf: float = 0.1  #0.1
-    sig_rc: float = 0.01
+    sig_rs: float = 0.5
+    sig_rconf: float = 0.5 
+    sig_rc: float = 0.001
     gamma_rate: float = 2
     mu_P: float = 0
     p_com: float = 0.5
