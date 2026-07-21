@@ -34,7 +34,6 @@ palette_vloc = {
 }
 palette_d = sns.color_palette("viridis", as_cmap=False)[::-1]
 
-
 def clean_axs(ax,fontsize=16):
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -61,10 +60,26 @@ def scale_marker_size(n, global_min, global_max,
         (smax - smin)
     )
 
+def get_global_min_max(df, groupvar, modality='A'):
+    df_plot = df[df['Modality'] == modality]
+
+    if isinstance(groupvar, str):
+        groupvar = [groupvar]
+
+    g_lst = ['VisRelLabel', 'Sources'] + groupvar
+
+    all_summary = (
+        df_plot
+        .groupby(g_lst)
+        .agg(n=('RespLoc', 'size'))
+        .reset_index()
+    )
+
+    return all_summary["n"].min(), all_summary["n"].max()
 
 ###################################################################################################
 ### plot the raw localization data
-def plot_raw_rep_all(df, rel, ax, visloc, palette,global_min=None, global_max=None,
+def plot_raw_rep_all(df, rel, ax, visloc, palette=palette_vloc,global_min=None, global_max=None,
                      power=2,
                      resp_var='RespLoc',
                      modality='A',
@@ -100,6 +115,7 @@ def plot_raw_rep_all(df, rel, ax, visloc, palette,global_min=None, global_max=No
             .sort_values("AudLoc")
         )
 
+        # use scaling to exaggerate the difference between the size of marker - not really work..
         if scale:
             summary["marker_size"] = scale_marker_size(n=summary["n"], global_min=global_min, global_max=global_max,
                       power=power, smin=50, smax=300)
@@ -210,7 +226,7 @@ def plot_raw_rep_all(df, rel, ax, visloc, palette,global_min=None, global_max=No
 
 ###################################################################################################
 ## plot localization uncertainty by spatial disparity
-def plot_CI_size_by_disp(df, m_id=None, ax=None, Modality='A', legend=False, scale=False, global_min=None, global_max=None,power=1):
+def plot_CI_size_by_disp(df, ax, m_id=None, palette = palette_beh_vrel, Modality='A', legend=False, scale=False, k=1):
     
     if m_id is not None:
         #model simulation data
@@ -248,8 +264,10 @@ def plot_CI_size_by_disp(df, m_id=None, ax=None, Modality='A', legend=False, sca
         )
 
         if scale:
-            summary["marker_size"] = scale_marker_size(n=summary["n"], global_min=global_min, global_max=global_max,
-                      power=power, smin=50, smax=300)
+            # for model simulation data (many simulated trials), linearly decrease to match the behavioural trial number in each condition
+            # summary["marker_size"] = scale_marker_size(n=summary["n"], global_min=global_min, global_max=global_max,
+            #           power=power, smin=50, smax=300)
+            summary["marker_size"] = summary["n"]/k
         else:
             summary["marker_size"] = summary["n"]
 
@@ -257,7 +275,7 @@ def plot_CI_size_by_disp(df, m_id=None, ax=None, Modality='A', legend=False, sca
             summary["abs_delta_VA"],
             summary["mean"],
             s=summary["marker_size"],
-            color=palette_beh_vrel[vrel],
+            color=palette[vrel],
             # edgecolors="black",
             # linewidth=0.5,
             zorder=3,
@@ -267,7 +285,7 @@ def plot_CI_size_by_disp(df, m_id=None, ax=None, Modality='A', legend=False, sca
             summary["abs_delta_VA"],
             summary["mean"],
             yerr=summary["sem"],
-            color=palette_beh_vrel[vrel],
+            color=palette[vrel],
             linewidth=2,
             capsize=2,
             label=f'{vrel} visual reliability',
@@ -348,7 +366,7 @@ def plot_CI_size_by_condition(df, m_id=None, axs=None, Modality='A', loc_var = '
 
 ###################################################################################################
 ### plot causal confidence
-def plot_casual_conf(df,ax, palette=palette_beh_vrel, trial_type=None, leg=False, scale=True, global_min=None, global_max=None, power=1):
+def plot_casual_conf(df,ax, palette=palette_beh_vrel, trial_type=None, leg=False, scale=False, k=1):
 
     trial_type_map = {'A':1, 'V':0}# 1 for auditory, 0 - for visual.
     if trial_type is not None:
@@ -379,7 +397,9 @@ def plot_casual_conf(df,ax, palette=palette_beh_vrel, trial_type=None, leg=False
         )
 
         if scale:
-            summary["marker_size"] = scale_marker_size(n=summary["n"], global_min=global_min, global_max=global_max, power=power)
+            # for model simulation data (many simulated trials), linearly decrease to match the behavioural trial number in each condition
+            #summary["marker_size"] = scale_marker_size(n=summary["n"], global_min=global_min, global_max=global_max, power=power)
+            summary["marker_size"] = summary["n"]/k 
         else:
             summary["marker_size"] = summary["n"]
             

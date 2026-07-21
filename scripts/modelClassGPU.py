@@ -112,8 +112,8 @@ class ConfiModel:
     def est_params(self):
         if self.exp_config['split_data_f'] == 0:
             params = ['sig_Vrh',  'sig_Vrl'   ,'sig_A'      ,'kC1'           ,'mC1'   , 'a'            ,'b']
-            bounds = [(1e-3, 5),  (1e-1, 20)  ,(1e-1, 20)   ,(1e-8, 50)      ,(-10, 10), (1e-8, 50)     ,(1e-8, 10)]  # bounds = []
-            p_bounds=[(1e-3, 2),  (2, 10)     ,(2, 15)      ,(1e-8, 20)      ,(-5, 5)  , (1e-8, 50)   ,(1e-8, 5)]  # plausible bounds [PLB, PUB], more narrow than the bounds
+            bounds = [(1e-3, 5),  (1e-1, 20)  ,(1e-1, 20)   ,(1e-8, 100)      ,(-100, 100), (1e-8, 50)     ,(1e-8, 10)]  # bounds = []
+            p_bounds=[(1e-3, 2),  (2, 10)     ,(2, 15)      ,(1e-8, 50)      ,(-50, 50)  , (1e-8, 50)   ,(1e-8, 5)]  # plausible bounds [PLB, PUB], more narrow than the bounds
         elif self.exp_config['split_data_f'] == 1:
             params = [ 'sig_V'   ,'sig_A'      ,'kC1'              ,'mC1'   , 'a'            ,'b' ]
             bounds = [ (1e-1, 20)  ,(1e-1, 20)   ,(1e-8, 50)      ,(-10, 10), (1e-8, 50)     ,(1e-8, 10)]  # bounds = []
@@ -666,14 +666,19 @@ class ConfiModel:
             resp[:, 2] = torch.where(sim_post[:, 0]>.5, 1, 2)
 
             # confidence
-            if self.exp_config['symetrical_causal_flag'] == 1:
+            if self.exp_config['symetrical_causal_flag'] == 1 and self.exp_config['linear_reduce'] == 0:
                 sim_c_map = torch.max(sim_post_conf, dim=1)[0]  # max posterior prob from both categories
                 resp[:, 3] = 1 / (1 + torch.exp(-sim_c_map * self.params.kC1 + self.params.mC1)).to(resp.dtype)
 
-            elif self.exp_config['symetrical_causal_flag'] == 0:
+            elif self.exp_config['symetrical_causal_flag'] == 0 and self.exp_config['linear_reduce'] == 0:
                 com_trial = resp[:, 2] == 1
                 resp[com_trial, 3] = 1 / (1 + torch.exp(-sim_post_conf[com_trial, 0] * self.params.kC1 + self.params.mC1)).to(resp.dtype)
                 resp[~com_trial, 3] = 1 / (1 + torch.exp(-sim_post_conf[~com_trial, 1] * self.params.kC2 + self.params.mC2)).to(resp.dtype)
+            
+            elif self.exp_config['symetrical_causal_flag'] == 1 and self.exp_config['linear_reduce'] == 1:
+                sim_c_map = torch.max(sim_post_conf, dim=1)[0]  # max posterior prob from both categories
+                resp[:, 3] = self.params.kC1 * (sim_c_map-0.5) + self.params.mC1
+                #1 / (1 + torch.exp(-sim_c_map * self.params.kC1 + self.params.mC1)).to(resp.dtype)
 
 
         elif self.model_config['Causal_readout'] == 'NonBay' and self.exp_config['split_data_f']<=2 :
