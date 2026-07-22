@@ -34,7 +34,7 @@ class ModelParams:
     a:float = 1
     b:float = 0
     kC1:float = 5
-    mC1:float = 1
+    mC1:float = 0
     kC2:float = 5
     mC2:float = 1
     ci_bin_k1:float = 0
@@ -111,18 +111,23 @@ class ConfiModel:
 
     def est_params(self):
         if self.exp_config['split_data_f'] == 0:
-            params = ['sig_Vrh',  'sig_Vrl'   ,'sig_A'      ,'kC1'           ,'mC1'   , 'a'            ,'b']
-            bounds = [(1e-3, 5),  (1e-1, 20)  ,(1e-1, 20)   ,(1e-8, 100)      ,(-100, 100), (1e-8, 50)     ,(1e-8, 10)]  # bounds = []
-            p_bounds=[(1e-3, 2),  (2, 10)     ,(2, 15)      ,(1e-8, 50)      ,(-50, 50)  , (1e-8, 50)   ,(1e-8, 5)]  # plausible bounds [PLB, PUB], more narrow than the bounds
+            params = ['sig_Vrh',  'sig_Vrl'   ,'sig_A'      ,'kC1'           , 'a'          ]
+            bounds = [(1e-3, 5),  (1e-1, 20)  ,(1e-1, 20)   ,(1e-8, 100)     , (1e-8, 100)   ]  # bounds = []
+            p_bounds=[(1e-3, 2),  (2, 10)     ,(2, 15)      ,(1e-8, 50)      , (1e-8, 50)   ]  # plausible bounds [PLB, PUB], more narrow than the bounds
         elif self.exp_config['split_data_f'] == 1:
-            params = [ 'sig_V'   ,'sig_A'      ,'kC1'              ,'mC1'   , 'a'            ,'b' ]
-            bounds = [ (1e-1, 20)  ,(1e-1, 20)   ,(1e-8, 50)      ,(-10, 10), (1e-8, 50)     ,(1e-8, 10)]  # bounds = []
-            p_bounds=[ (2, 10)     ,(2, 15)      ,(1e-8, 20)      ,(-5, 5)  , (1e-8, 50)   ,(1e-8, 5)]  # plausible bounds [PLB, PUB], more narrow than the bounds
+            params = [ 'sig_V'   ,'sig_A'      ,'kC1'            , 'a'           ]
+            bounds = [ (1e-1, 20)  ,(1e-1, 20)   ,(1e-8, 50)     , (1e-8, 50)    ]  # bounds = []
+            p_bounds=[ (2, 10)     ,(2, 15)      ,(1e-8, 20)     , (1e-8, 50)    ]  # plausible bounds [PLB, PUB], more narrow than the bounds
         elif self.exp_config['split_data_f'] == 2:
-            params = ['sig_Vrh',  'sig_Vrl'   ,'sig_A'   , 'a'            ,'b' ]
-            bounds = [(1e-3, 5),  (1e-1, 20)  ,(1e-1, 20), (1e-8, 50)     ,(1e-8, 10)]  # bounds = []
-            p_bounds=[(1e-3, 2),  (2, 10)     ,(2, 15)   , (1e-8, 50)   ,(1e-8, 5)]  # plausible bounds [PLB, PUB], more narrow than the bounds
+            params = ['sig_Vrh',  'sig_Vrl'   ,'sig_A'   , 'a'          ]
+            bounds = [(1e-3, 5),  (1e-1, 20)  ,(1e-1, 20), (1e-8, 50)   ]  # bounds = []
+            p_bounds=[(1e-3, 2),  (2, 10)     ,(2, 15)   , (1e-8, 50)   ]  # plausible bounds [PLB, PUB], more narrow than the bounds
 
+        if self.exp_config['no_b_flag'] == 0:
+            # add the intercept
+            params.extend(['mC1', 'b'])
+            bounds.extend([(-100, 100), (1e-8, 10)])  
+            p_bounds.extend([(-50, 50), (1e-8, 5)])
         # else:
         #     params.extend(['a'            ,'b'])
         #     bounds.extend([(1e-8, 50)     ,(1e-8, 10)])  
@@ -677,7 +682,8 @@ class ConfiModel:
             
             elif self.exp_config['symetrical_causal_flag'] == 1 and self.exp_config['linear_reduce'] == 1:
                 sim_c_map = torch.max(sim_post_conf, dim=1)[0]  # max posterior prob from both categories
-                resp[:, 3] = self.params.kC1 * (sim_c_map-0.5) + self.params.mC1
+                resp[:, 3] = self.params.kC1 * sim_c_map + self.params.mC1
+                #resp[:, 3] = self.params.kC1 * (sim_c_map-0.5) + self.params.mC1
                 #1 / (1 + torch.exp(-sim_c_map * self.params.kC1 + self.params.mC1)).to(resp.dtype)
 
 
