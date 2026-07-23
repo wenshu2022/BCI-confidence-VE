@@ -1,0 +1,74 @@
+----------------------------------------
+Start task prologue Thu Jul 23 11:00:16 CEST 2026
+----------------------------------------
+Step ID:         54342752.
+Username:        wenlou
+Group:           mpla
+Asked resources: walltime=1-00:00:00,nodes=1,cpus=8,mem=2G
+Queue:           gpu
+Compute nodes:   dccn-c052
+----------------------------------------
+End task prologue Thu Jul 23 11:00:16 CEST 2026
+----------------------------------------
+CUDA version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Mar_28_02:18:24_PDT_2024
+Cuda compilation tools, release 12.4, V12.4.131
+Build cuda_12.4.r12.4/compiler.34097967_0
+
+[WARNING] Please note the interface change for (de-)activating conda environment:
+
+  - DO NOT use `conda activate` to enter the conda environment as it requires extra step to modify your ~/.bashrc file, which will force you to use this Anaconda version (2024.06).  Therefore keep using `source activate` instead.
+
+  - DO use `conda deactivate` to leave your conda environment as `source deactivate` will be deprecated in future release.
+
+Running model for expriment=with_dn_linear_p0, m_id=2, method=bads
+device is : cuda
+['with_dn_linear_p0', '2', 'all', 'bads', '2']
+
+ ------- Start Optimization for Subject 2 ---------- 
+
+ Cross Validation fold 0/1
+
+ -- Start Optimization: method BADS --
+
+ Optimization Run 1/2
+Initial params: [0.6701, 4.6686, 7.1659, 29.7756, 8.7231, 6.6656, 0.0041, 0.1161, 25.7046, 0.3198, 0.8012, 0.2686, -0.2897]
+bads:InitialPointsTooClosePB: The starting points X0 are on or numerically too close to the hard bounds lower_bounds and upper_bounds. Moving the initial points more inside...
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+bads:InitialPointsOutsidePB. The starting points X0 are not inside the provided plausible bounds (plausible_lower_bounds and plausible_upper_bounds). Expanding the plausible bounds...
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 4]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         25798.5             nan               1                                  
+     0          33         25596.2             nan               1          Initial mesh            Initial points
+     0          34         25594.4        0.999998               1        Successful poll           Train
+     1          35         25262.7        0.999992               1      Successful search (ES-wcm)        
+     1          41         25212.6        0.998532               1      Successful search (ES-ell)        
+     1          45         25156.7        0.994756               1      Successful search (ES-ell)        
+     1          54         25148.3        0.989101               1      Successful search (ES-ell)        
+     1          66         25139.9        0.806932               1      Successful search (ES-ell)        
+     1          88         25126.8        0.803249               1        Successful poll           Train
+     2          89           25096         4.27215               1      Successful search (ES-ell)        
+     2          90         25077.2         4.29528               1      Successful search (ES-ell)        
+     2          93         25053.5         4.27628               1      Successful search (ES-ell)        
+     2          95         25051.7         4.26752               1      Successful search (ES-ell)        
+     2          98         25048.1         3.85091               1      Successful search (ES-ell)        
+     2         101         25047.4         3.58012               1      Incremental search (ES-ell)        
+     2         128         25047.4         3.58012             0.5          Refine grid             Train
+     3         129         25040.9         3.17924             0.5      Successful search (ES-ell)        
+     3         130         25039.1          4.4489             0.5      Successful search (ES-wcm)        
+     3         132         25038.2         4.03693             0.5      Successful search (ES-wcm)        
+     3         173         25038.2         4.03693            0.25          Refine grid             Train
+     4         174         25045.8         3.74423            0.25      Successful search (ES-wcm)        
+     4         188         25045.4         1.26057            0.25      Successful search (ES-wcm)        
+     4         189         25044.4         1.96598            0.25      Successful search (ES-wcm)        
+     4         190         25040.9         3.11388            0.25      Successful search (ES-ell)        
+     4         234         25040.9         3.11388           0.125          Refine grid             
+     5         235         25047.9         1.00392           0.125      Successful search (ES-ell)        
+     5         236         25046.5         1.35362           0.125      Successful search (ES-ell)        

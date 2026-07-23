@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Experiment and model setup
-exp_name='with_dn_linear_nob'
+exp_name='with_dn_linear_p2'
 MODEL_IDS=(2)   # list of models
 opt='bads'            # COBYLA, POWELL, COBYQA, bads
 subj_setup='all'      # or 'all' e.g., '2,3,5,6,11,15,20,25'
