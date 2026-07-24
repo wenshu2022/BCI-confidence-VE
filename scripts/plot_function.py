@@ -33,7 +33,8 @@ palette_vloc = {
     10: "#006d2c",   # dark green
 }
 palette_d = sns.color_palette("viridis", as_cmap=False)[::-1]
-
+palette_ci = {1: "tab:purple", 2:"tab:olive"}
+              
 def clean_axs(ax,fontsize=16):
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -226,7 +227,7 @@ def plot_raw_rep_all(df, rel, ax, visloc, palette=palette_vloc,global_min=None, 
 
 ###################################################################################################
 ## plot localization uncertainty by spatial disparity
-def plot_CI_size_by_disp(df, ax, m_id=None, palette = palette_beh_vrel, Modality='A', legend=False, scale=False, k=1):
+def plot_CI_size_by_disp_vrel(df, ax, m_id=None, palette = palette_beh_vrel, Modality='A', legend=False, scale=False, k=1):
     
     if m_id is not None:
         #model simulation data
@@ -299,6 +300,88 @@ def plot_CI_size_by_disp(df, ax, m_id=None, palette = palette_beh_vrel, Modality
     plot_condition(df, 'Low')
     if legend:
         ax.legend(
+            frameon=False,
+            ncol=2,
+            fontsize=fontsize-2,
+            loc='lower center',
+            bbox_to_anchor=(0.4, -0.4),
+        )
+
+    clean_axs(ax)
+
+def plot_CI_size_by_disp(df, ax, m_id=None, palette = palette_ci, Modality='A', legend=False, scale=False, k=1):
+    
+    if m_id is not None:
+        #model simulation data
+        df = df.loc[(df.m_id == m_id) & (df.Modality == Modality)].copy()
+    else:
+        #beh data
+        df = df.loc[df.Modality == Modality].copy()
+    #df_plot = df.groupby(['sub_id', 'VisRelLabel', 'abs_delta_VA']).CISize.mean().reset_index()
+    sources_label = {1:'Report same cause', 2:'Report different causes'}
+    # ------------------------------------------------------------
+    # Helper function
+    # ------------------------------------------------------------
+    #def plot_condition(df, vrel):
+        #df_cond = df.loc[df.VisRelLabel==vrel]
+        # Mean, SEM and total number of trials - two steps averaging
+    summary_sub = (
+        df
+        .groupby(['abs_delta_VA', 'Sources', "sub_id"])
+        .agg(
+            mean=('CISize', "mean"),
+            n=('CISize', "size")
+        )
+        .reset_index()
+    )
+    summary = (
+        summary_sub
+        .groupby(["abs_delta_VA", 'Sources'])
+        .agg(
+            mean=('mean', "mean"),
+            sem=('mean', "sem"),
+            n=('n', "sum")
+        )
+        .reset_index()
+        .sort_values(["abs_delta_VA", 'Sources'])
+    )
+
+    if scale:
+        # for model simulation data (many simulated trials), linearly decrease to match the behavioural trial number in each condition
+        # summary["marker_size"] = scale_marker_size(n=summary["n"], global_min=global_min, global_max=global_max,
+        #           power=power, smin=50, smax=300)
+        summary["marker_size"] = summary["n"]/k
+    else:
+        summary["marker_size"] = summary["n"]
+
+    for sour in [1, 2]:
+        ax.scatter(
+            summary.loc[summary.Sources==sour, "abs_delta_VA"],
+            summary.loc[summary.Sources==sour,"mean"],
+            s=summary.loc[summary.Sources==sour,"marker_size"],
+            color=palette[sour],
+            # edgecolors="black",
+            # linewidth=0.5,
+            zorder=3,
+            alpha=0.7,
+        )
+        ax.errorbar(
+            summary.loc[summary.Sources==sour, "abs_delta_VA"],
+            summary.loc[summary.Sources==sour, "mean"],
+            yerr=summary.loc[summary.Sources==sour, "sem"],
+            color=palette[sour],
+            linewidth=2,
+            capsize=2,
+            label=sources_label[sour],
+            zorder=2,
+            #alpha=0.7,
+            marker='o',
+            markersize=5,
+        )
+
+    if legend:
+        ax.legend(
+            #title = 'Sources',
             frameon=False,
             ncol=2,
             fontsize=fontsize-2,
