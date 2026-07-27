@@ -563,7 +563,11 @@ class ConfiModel:
 
         ################################
         # Read out the perceptual confidence interval
-        if self.model_config['CI_readout'] == 'BayInt' and self.model_config['perc_readout'] == 'Bay':
+        if self.model_config['CI_readout'] == 'lin_sig' and self.model_config['perc_readout'] == 'Bay' and self.model_config['est_var'] == 'MS':
+
+            resp[:, 1] = self.params.a * sig_hat_MS + self.params.b
+
+        elif self.model_config['CI_readout'] == 'BayInt' and self.model_config['perc_readout'] == 'Bay':
             if self.exp_config['rng_flag']==1:
                 rng = torch.zeros(ntrial, device=self.device)
                 rng[trialConds[:, 3] == 1] = self.params.rngA
