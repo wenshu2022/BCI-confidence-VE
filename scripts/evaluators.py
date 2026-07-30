@@ -57,6 +57,8 @@ class ModelEvaluator:
 
     def get_best_param_nll(self, m_id:int, sub_id:int, by:str = 'test'):
         df = self.dh.get_sub_fit_data(m_id=m_id, exp_name=self.exp.exp_name, sub_id=sub_id)
+        #sAMPLE 30
+        #df = df.tail(n=10)
         if 'model_id' in df.columns and 'm_id' not in df.columns: # for some legacy reason
             df.rename(columns={'model_id': 'm_id'}, inplace=True)
        

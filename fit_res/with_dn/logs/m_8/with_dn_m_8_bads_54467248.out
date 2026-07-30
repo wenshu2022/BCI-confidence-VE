@@ -1,0 +1,103 @@
+----------------------------------------
+Start task prologue Thu Jul 30 14:00:45 CEST 2026
+----------------------------------------
+Step ID:         54467248.
+Username:        wenlou
+Group:           mpla
+Asked resources: walltime=1-00:00:00,nodes=1,cpus=8,mem=2G
+Queue:           gpu
+Compute nodes:   dccn-c085
+----------------------------------------
+End task prologue Thu Jul 30 14:00:45 CEST 2026
+----------------------------------------
+CUDA version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Mar_28_02:18:24_PDT_2024
+Cuda compilation tools, release 12.4, V12.4.131
+Build cuda_12.4.r12.4/compiler.34097967_0
+
+[WARNING] Please note the interface change for (de-)activating conda environment:
+
+  - DO NOT use `conda activate` to enter the conda environment as it requires extra step to modify your ~/.bashrc file, which will force you to use this Anaconda version (2024.06).  Therefore keep using `source activate` instead.
+
+  - DO use `conda deactivate` to leave your conda environment as `source deactivate` will be deprecated in future release.
+
+Running model for expriment=with_dn, m_id=8, method=bads
+device is : cuda
+['with_dn', '8', 'all', 'bads', '2']
+
+ ------- Start Optimization for Subject 2 ---------- 
+
+ Cross Validation fold 0/1
+
+ -- Start Optimization: method BADS --
+
+ Optimization Run 1/2
+Initial params: [0.9006, 6.8158, 13.6214, 14.0893, 26.4606, 47.6808, 3.6812, 0.563, 26.092, 18.6129, 0.6202, 0.8839, 0.9298]
+bads:TooCloseBounds: For each variable, hard and plausible bounds should not be too close. Moving plausible bounds.
+Variables (index) internally transformed to log coordinates: [[0 0]
+ [0 3]
+ [0 4]
+ [0 6]]
+Beginning optimization of a STOCHASTIC objective function
+
+ Iteration    f-count      E[f(x)]        SD[f(x)]           MeshScale          Method              Actions
+     0           1         26151.5             nan               1                                  
+     0          33         25777.7             nan               1          Initial mesh            Initial points
+     0          52         25708.6         1.00395               1        Successful poll           Train
+     1          53         25376.8         1.00388               1      Successful search (ES-wcm)        
+     1          55           25243         1.00373               1      Successful search (ES-wcm)        
+     1          57         25125.9         1.00345               1      Successful search (ES-wcm)        
+     1          60         24946.6         1.00311               1      Successful search (ES-wcm)        
+     1          70         24935.7         1.16799               1      Successful search (ES-wcm)        
+     1          85         24926.8         1.10412               1      Successful search (ES-ell)        
+     1          94           24920         2.18157               1      Successful search (ES-wcm)        
+     1          98           24888         2.18133               1      Successful search (ES-wcm)        
+     1         101         24887.2         2.05903               1      Incremental search (ES-ell)        
+     1         102         24869.1          2.1819               1      Successful search (ES-wcm)        
+     1         113         24857.4         2.09981               1      Successful search (ES-wcm)        
+     1         142         24845.5         3.86038               1        Successful poll           Train
+     2         154         24836.1         2.24476               1      Incremental search (ES-wcm)        
+     2         155         24829.1         2.76007               1      Successful search (ES-wcm)        
+     2         156         24820.8         7.01691               1      Successful search (ES-wcm)        
+     2         160         24792.5         6.73226               1      Successful search (ES-wcm)        
+     2         163         24742.5         6.80481               1      Successful search (ES-wcm)        
+     2         164         24735.2         6.23522               1      Successful search (ES-ell)        
+     2         167         24724.8         6.64059               1      Successful search (ES-wcm)        
+     2         171         24696.2          6.0288               1      Successful search (ES-ell)        
+     2         183         24691.4         5.96114               1      Successful search (ES-ell)        
+     2         195         24675.6         6.02455               1      Successful search (ES-ell)        
+     2         238         24675.6         6.02455             0.5          Refine grid             
+     3         239         24677.6         5.80558             0.5      Successful search (ES-ell)        
+     3         240           24674         7.98311             0.5      Successful search (ES-ell)        
+     3         241         24641.1         8.59051             0.5      Successful search (ES-ell)        
+     3         243         24630.1         8.50865             0.5      Successful search (ES-ell)        
+     3         254         24629.6          6.4549             0.5      Successful search (ES-wcm)        
+     3         255         24629.1         7.98544             0.5      Successful search (ES-wcm)        
+     3         257           24609         7.83555             0.5      Successful search (ES-wcm)        
+     3         260         24606.5         6.57974             0.5      Successful search (ES-wcm)        
+     3         299         24604.2         8.26132               1        Successful poll           
+     4         304         24600.7         7.80705               1      Successful search (ES-ell)        
+     4         314         24591.5         8.24419               1      Successful search (ES-wcm)        
+     4         329         24580.5         4.00234               1      Successful search (ES-ell)        
+     4         330         24576.7         5.32958               1      Successful search (ES-ell)        
+     4         368         24576.7         5.32958             0.5          Refine grid             
+     5         369         24599.2         4.19718             0.5      Successful search (ES-ell)        
+     5         371         24592.4         5.13284             0.5      Successful search (ES-ell)        
+     5         415         24592.4         5.13284            0.25          Refine grid             Train
+     6         416         24588.2         3.28301            0.25      Successful search (ES-wcm)        
+     6         419         24586.5          3.2039            0.25      Successful search (ES-wcm)        
+     6         420         24583.9         4.99824            0.25      Successful search (ES-wcm)        
+     6         460         24582.5         2.91836             0.5        Successful poll           Train
+     7         464         24577.2         3.18337             0.5      Successful search (ES-wcm)        
+     7         506         24577.2         3.18337            0.25          Refine grid             
+     8         507         24580.3         3.06141            0.25      Successful search (ES-wcm)        
+     8         523         24576.8         1.48946            0.25      Successful search (ES-wcm)        
+     8         524         24572.9         2.40712            0.25      Successful search (ES-wcm)        
+     8         567         24572.9         2.40712           0.125          Refine grid             
+     9         568         24581.2          1.7479           0.125      Successful search (ES-ell)        
+     9         569         24579.2         2.61782           0.125      Successful search (ES-ell)        
+     9         617         24573.4         1.29953            0.25        Successful poll           
+    10         620         24572.3         1.71735            0.25      Successful search (ES-ell)        
+    10         621         24570.5         2.56978            0.25      Successful search (ES-ell)        

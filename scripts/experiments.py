@@ -217,11 +217,13 @@ class DataHandler:
             sub_data[:,-2] = sub_data[:,-2]/100.0
         return sub_data
     
-    def get_sub_fit_data(self, m_id:int, exp_name:str, sub_id:int):
+    def get_sub_fit_data(self, m_id:int, exp_name:str, sub_id:int, read_pkl=False):
         sub_file_name = self.get_sub_fit_filename(m_id=m_id, exp_name = exp_name , sub_id=sub_id)
-        if not os.path.exists(sub_file_name):
+        if not read_pkl:
             self.organize_parial_data(m_id=m_id, exp_name=exp_name, sub_id=sub_id)
-            #raise FileNotFoundError(f"Result file {sub_file_name} does not exist.")
+        # if not os.path.exists(sub_file_name):
+        #     self.organize_parial_data(m_id=m_id, exp_name=exp_name, sub_id=sub_id)
+        #     #raise FileNotFoundError(f"Result file {sub_file_name} does not exist.")
         df = pd.read_pickle(sub_file_name)
         return df
 
