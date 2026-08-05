@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/mpla/wenlou/1confiProj/model_fitting.py", line 92, in <module>
+    run_bads(m_id, sub_id, i_fold, save_file_name, objf, x0s,lower_bounds=lower_bounds, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/1confiProj/scripts/run_optimizers.py", line 119, in run_bads
+    optimize_result = bads.optimize()
+                      ^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/pybads/bads/bads.py", line 1243, in optimize
+    ) = self._search_step_(gp)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/pybads/bads/bads.py", line 1590, in _search_step_
+    u_search_set, z = self.search_es_hedge(
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/pybads/search/search_hedge.py", line 78, in __call__
+    us, z = search(
+            ^^^^^^^
+  File "/home/mpla/wenlou/.conda/envs/pytorch_env/lib/python3.12/site-packages/pybads/search/es_search.py", line 210, in __call__
+    return us[0], z[0]
+           ~~^^^
+IndexError: index 0 is out of bounds for axis 0 with size 0

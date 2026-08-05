@@ -443,7 +443,7 @@ def plot_CI_size_by_condition(df, m_id=None, axs=None, Modality='A', loc_var = '
         title_fontsize=fontsize-2
     )
 
-    axs[0].set_ylabel('Localization uncertainty \n response ($^\\circ$)', fontsize=fontsize)
+    axs[0].set_ylabel('Localization confidence \n range response ($^\\circ$)', fontsize=fontsize)
     axs[0].set_xlabel('Sound location ($^\\circ$)', fontsize=fontsize)
     axs[1].set_xlabel('Sound location ($^\\circ$)', fontsize=fontsize)
 

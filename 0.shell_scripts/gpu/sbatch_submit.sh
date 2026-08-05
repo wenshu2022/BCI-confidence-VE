@@ -2,10 +2,10 @@
 
 # Experiment and model setup
 exp_name='with_dn'
-MODEL_IDS=(2)   # list of models
+MODEL_IDS=(8)   # list of models
 opt='bads'            # COBYLA, POWELL, COBYQA, bads
-subj_setup='all'      # or 'all' e.g., '2,3,5,6,11,15,20,25'
-n_runs=2             # <-- define this!
+subj_setup='25'      # or 'all' e.g., '2,3,5,6,11,15,20,25'
+n_runs=4             # <-- define this!
 
 # Paths
 base_path="/home/mpla/wenlou/1confiProj"
